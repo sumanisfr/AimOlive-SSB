@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>About | AimOlive</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Ubuntu:wght@700&family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="favicon/favicon-32x32.png">
+
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #fdfdfd;
+      color: #2b2b2b;
+      padding-top: 70px; /* Account for fixed-top navbar */
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #3C5B34;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+      font-weight: bold;
+    }
+    .navbar-toggler {
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+    .navbar-toggler-icon { /* Replaced by FontAwesome */
+      display: none;
+    }
+
+    /* About Section */
+    .about-heading {
+      font-family: 'Orbitron', sans-serif;
+      color: #3C5B34;
+      text-align: center;
+      font-size: 2.8rem;
+      margin-top: 30px; /* Reduced margin */
+    }
+    .about-subheading {
+      color: #2d4723;
+      font-weight: bold;
+      font-family: 'Ubuntu', sans-serif;
+      border-left: 4px solid #3C5B34;
+      padding-left: 10px;
+    }
+    .about-writeup {
+      color: #333;
+      line-height: 1.8;
+      font-size: 1.1rem;
+    }
+    hr.section-divider {
+      border-top: 2px solid #3C5B34;
+      width: 90%;
+      margin: 40px auto;
+    }
+
+    /* Profile Section Card */
+    .profile-section {
+      background-color: #f6f8f6;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      /* Sticky on desktop */
+      position: sticky;
+      top: 90px;
+    }
+    .profile-section h3 {
+      font-family: 'Ubuntu', sans-serif;
+      color: #3C5B34;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #3C5B34;
+      object-fit: cover;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .social-links a {
+      margin: 0 10px;
+      font-size: 1.7rem;
+      color: #3C5B34;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      color: #2a3d22;
+      transform: scale(1.15) translateY(-3px);
+    }
+    .btn-custom-green {
+      background-color: #3C5B34;
+      color: white;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+      border: none;
+    }
+    .btn-custom-green:hover {
+      background-color: #2a3d22;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Footer */
+    .footer-content {
+      background-color: #3C5B34;
+      color: white;
+      padding: 25px 10px;
+      font-family: 'Ubuntu', sans-serif;
+      margin-top: 50px;
+    }
+    .footer-content h5 {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #ffc107;
+    }
+    .footer-content h6 {
+      margin-top: 10px;
+      color: #cfcfcf;
+      font-size: 0.9rem;
+    }
+    .made-by {
+      color: white; /* Changed from red */
+      font-weight: bold;
+    }
+    .footer-content a {
+        color: #ffd700;
+        transition: 0.3s;
+    }
+    .footer-content a:hover {
+        color: #fff;
+    }
+    .footer-icon {
+        color: #ffd700;
+        margin-left: 5px;
+    }
+    .footer-icon:hover {
+        color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 60px;
+      }
+      .about-heading {
+        font-size: 2.2rem;
+      }
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+      .profile-section {
+        position: static; /* Remove sticky on mobile */
+        margin-top: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg">
+    <a class="navbar-brand" href="index.html">AimOlive</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars" style="color:white; font-size: 1.6rem;"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="practiceDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Practice</a>
+          <div class="dropdown-menu" aria-labelledby="practiceDropdown">
+            <a class="dropdown-item" href="PPDT-arena.html">PPDT</a>
+            <a class="dropdown-item" href="TAT-arena.html">TAT</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="ALL-PRACTICE-PDF.html">All Practice PDFs</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top: 30px;">
+    <h1 class="about-heading">About AimOlive</h1>
+    <hr class="section-divider">
+
+    <div class="row">
+      <div class="col-lg-8">
+        <section class="mb-4">
+          <h2 class="about-subheading">What is AimOlive?</h2>
+          <p class="about-writeup mt-3">
+            <strong>AimOlive</strong> is a non-profit platform created by <strong>Suman Kumar Ghosh</strong> to help
+            <strong>SSB aspirants</strong> improve their <strong>PPDT</strong> and <strong>TAT</strong> story writing skills
+            [cite_start]through time-bound, self-paced practice sessions. [cite: 2]
+            <br><br>
+            It aims to build the qualities of observation, imagination, and decision-making
+            — the essential traits of an officer.
+            <br><br>
+            <strong>AimOlive</strong> doesn’t provide coaching or tips; it provides the arena for you to practice, evaluate, and improve yourself.
+          </p>
+        </section>
+
+        <hr class="my-4">
+
+        <section>
+          <h2 class="about-subheading">How It Started</h2>
+          <p class="about-writeup mt-3">
+            [cite_start]While learning <strong>Full-Stack Web Development</strong>[cite: 10, 11], I wanted to build something that could
+            serve a real purpose — to contribute to the <strong>defense aspirant community</strong>.
+            <br><br>
+            That’s how <strong>AimOlive</strong> was born — with the mission to help aspirants train their minds
+            and improve through disciplined, smart practice.
+          </p>
+        </section>
+
+        <div class="text-center d-lg-none mt-4"> <a href="index.html"><button class="btn btn-custom-green btn-lg mt-3">← Back to Home</button></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="profile-section">
+          <img src="images/profile.jpg" alt="Suman Kumar Ghosh" class="profile-pic" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNDNUIzNCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0yMCAyMWE4IDggMCAwIDAtMTYgMCIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iOSIgcj0iNCIvPjwvc3ZnPg=='; this.onerror=null;">
+          
+          <h3>👨‍💻 About the Creator</h3>
+          
+          <p class="about-writeup" style="text-align: left; font-size: 0.95rem;">
+            [cite_start]I’m <strong>Suman Kumar Ghosh</strong> [cite: 2][cite_start], a B.Tech Computer Science student at <strong>IGIT, Sarang</strong> (Class of 2027) with a <strong>9.18 CGPA</strong> and ranked in the <strong>top 5%</strong> of my class. [cite: 34, 36, 40]
+            <br><br>
+            [cite_start]I am passionate about the intersection of technology and national service, specializing in <strong>AI/ML</strong> and <strong>Cybersecurity</strong>. [cite: 5, 6, 13] This project is my way of combining my development skills with my deep respect for the defence community.
+            <br><br>
+            [cite_start]Outside of academics, I'm a <strong>GSSOC Mentor</strong> [cite: 40][cite_start], a <strong>State-level NCC TSC representative</strong> [cite: 41][cite_start], and an <strong>Odisha State Thai Boxing Bronze Medalist</strong>[cite: 42].
+          </p>
+
+          <h4 class="mt-4" style="color:#2d4723; font-family: 'Ubuntu', sans-serif;">🔗 Connect with Me</h4>
+          <div class="social-links mt-3">
+            <a href="https://sumanisfr.github.io/My-Portfolio/" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
+            <a href="https://www.linkedin.com/in/suman-kumar-ghosh/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/sumanisfr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://leetcode.com/sumanisfr/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+            [cite_start]<a href="mailto:sumankumarghosh94@gmail.com" title="Email"><i class="fas fa-envelope"></i></a> [cite: 3]
+          </div>
+        </div>
+
+         <div class="text-center d-none d-lg-block"> <a href="index.html"><button class="btn btn-custom-green btn-lg mt-4">← Back to Home</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="footer-content text-center">
+    <h5>⚠️ DISCLAIMER: This website does not provide coaching or guarantee SSB recommendation.</h5>
+    <p class="mt-3">
+      Built with ❤️ and discipline by <span class="made-by">Suman Kumar Ghosh</span>
+      <a href="https://github.com/sumanisfr" target="_blank" title="GitHub Profile">
+        <i class="fab fa-github footer-icon"></i>
+      </a>
+    </p>
+    <h6>© 2025 AimOlive | All Rights Reserved</h6>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
