@@ -1,99 +1,169 @@
-# 🪖 AimOlive - SSB Practice Platform
+# 🌿 AimOlive — Free SSB Interview Practice Platform
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-A free, all-in-one web platform for Indian Armed Forces aspirants to practice for the SSB interview (PPDT & TAT) and access a comprehensive PDF library.
-
-**[Link to Live Demo]** 👈 (Add your GitHub Pages or deployment link here)
-
-![AimOlive Screenshot](featurespic/aimolive-demo.png)
-*(Suggestion: Add a screenshot of your live site and name it `aimolive-demo.png` in the `featurespic` folder)*
+> **Created & Maintained by [Suman Kumar Ghosh](https://github.com/sumanisfr)**  
+> ⚔️ A Non-Profit Web Platform for Defense Aspirants
 
 ---
 
-## 🎯 About The Project
+## 🎯 Project Overview
 
-**AimOlive** is a non-profit, static website built to help fellow Service Selection Board (SSB) aspirants. It provides a dedicated, free platform to improve Picture Perception & Discussion Test (PPDT) and Thematic Apperception Test (TAT) story-writing skills through time-bound, self-paced practice.
+**AimOlive** is a free and open platform designed to help **SSB aspirants** practice **PPDT** (Picture Perception & Discussion Test) and **TAT** (Thematic Apperception Test) in a structured, realistic, and time-bound environment.
 
-Beyond the practice arenas, it also solves a major problem for aspirants: resource management. It consolidates hundreds of essential preparation PDFs (OIR, GTO, WAT, SRT, etc.) into a single, organized, and easy-to-navigate HTML page.
+The website includes:
 
-This project was built by an aspirant, for aspirants, with the mission to help train our minds and improve through disciplined, smart practice.
-
----
-
-## ✨ Key Features
-
-* **📖 All-in-One PDF Library:** A single, clean interface (`ALL-PRACTICE_PDF.html`) to access your entire local library of SSB books and materials, organized by stage (OIR, GTO, WAT, SRT, etc.).
-* **⏱️ Realistic Timed Practice:** Dedicated practice "arenas" for PPDT and TAT that simulate real exam time constraints to train your mind for pressure.
-* **✅ 100% Free & Accessible:** No logins, no subscriptions, no fees. All features and materials are open for everyone.
-* **📱 Fully Responsive:** Built with Bootstrap 4, the entire site is usable on desktop, tablet, and mobile.
-* **📇 Dynamic "About Me" Page:** Features a dynamic Gravatar pull for the profile picture and a professional layout.
+- A **practice arena** for PPDT & TAT  
+- A **complete digital library** of all major **SSB preparation PDFs** (OIR, GTO, SRT, WAT, etc.)  
+- Responsive, modern UI optimized for mobile and desktop devices  
+- Built with ❤️ for the defense aspirant community  
 
 ---
 
-## 🛠️ Built With
+## 🌐 Live Project
 
-This is a static website built with:
-
-* **HTML5**
-* **CSS3** (Custom properties, transitions, and responsive design)
-* **Bootstrap 4** (For grid layout, cards, and navbar)
-* **FontAwesome 5** (For all icons)
-* **Google Fonts** (Orbitron, Ubuntu, Raleway)
-* **JavaScript** (To power Bootstrap's dynamic components like dropdowns and collapses)
+👉 **[Visit AimOlive Website](https://sumanisfr.github.io/AimOlive/)** *(You can update this once hosted)*
 
 ---
 
-## 🚀 How to Use
+## 🚀 Key Features
 
-This project is designed to run locally, as it links to your personal collection of PDF files.
+✅ **Time-Bound Practice Arena**  
+> Simulates real SSB testing conditions for PPDT and TAT sessions.  
 
-**Prerequisite:** You must have your own collection of SSB practice PDFs and images organized into a folder structure. The `ALL-PRACTICE_PDF.html` file is built to work with the specific structure shown in the user's screenshots (i.e., a main folder named `SSB-Interview-main`).
+✅ **Free SSB Study Material**  
+> Access all major SSB prep PDFs (Stage I & II) in one place — OIR, TAT, WAT, GTO, SRT, and more.  
 
-**Running Locally:**
+✅ **Modern & Responsive Design**  
+> Works seamlessly across all devices using Bootstrap 4 and FontAwesome icons.  
 
-1. **Clone the repository:**
+✅ **No Login or Payment Required**  
+> 100% free and accessible for all — just open and start practicing.  
 
-    ```sh
-    git clone [https://github.com/sumanisfr/AimOlive.git](https://github.com/sumanisfr/AimOlive.git)
-    ```
-
-2. **Navigate to the directory:**
-
-    ```sh
-    cd AimOlive
-    ```
-
-3. **Set up your materials (Crucial Step):**
-    * Place your main folder of PDFs (e.g., `SSB-Interview-main`) **inside** the cloned `AimOlive` directory, at the same level as `index.html`.
-    * The links in `ALL-PRACTICE_PDF.html` are relative (e.g., `SSB-Interview-main/Book/RS (AGARWAL) APPTITUDE.pdf`). Your folder name and file names **must match** those in the HTML file for the links to work.
-
-4. **Open the site:**
-    * Simply double-click `index.html` to open it in your default web browser.
+✅ **Community-Driven Project**  
+> Built to empower SSB aspirants through disciplined self-practice and open learning.
 
 ---
 
-## 📁 Project File Structure
+## 🧩 Project Structure
 
-AimOlive/ ├── index.html # The main landing page ├── about.html # About the creator page ├── ALL-PRACTICE_PDF.html # The consolidated PDF library ├── PPDT-arena.html # PPDT practice page (Not included in prompt, but linked) ├── TAT-arena.html # TAT practice page (Not included in prompt, but linked) ├── featurespic/ │ ├── free.png │ ├── content-huge.jpg │ └── clock.jpg ├── images/ │ └── ssb-bg.jpg ├── favicon/ │ └── favicon-32x32.png └── README.md # This file
+AimOlive/
+│
+├── index.html # Main homepage (PPDT/TAT entry page)
+├── about.html # About page (project info & creator details)
+├── ALL-PRACTICE_PDF.html # Central access to all study PDFs
+├── PPDT-arena.html # PPDT practice section
+├── TAT-arena.html # TAT practice section
+│
+├── css/
+│ └── home.css # Main stylesheet for design and responsiveness
+│
+├── favicon/
+│ ├── favicon-32x32.png
+│ └── apple-touch-icon.png
+│
+├── featurespic/ # Images used in feature cards
+│ ├── clock.jpg
+│ ├── free.png
+│ └── content-huge.jpg
+│
+└── images/
+├── ssb-bg.jpg # Background image for banner
+├── profile.jpg # Optional creator profile image
+└── other assets...
+
+---
+
+## 🛠️ Tech Stack Used
+
+| Technology | Purpose |
+|-------------|----------|
+| **HTML5** | Website Structure |
+| **CSS3** | Styling and Animations |
+| **Bootstrap 4** | Responsive Design |
+| **FontAwesome** | Icons and Visual Elements |
+| **Google Fonts** | Typography (Orbitron, Ubuntu, Raleway) |
+| **JavaScript (Bootstrap JS)** | Navbar and Dropdown Interactivity |
+
+---
+
+## 📚 Main Pages Description
+
+### 🏠 **Home Page (`index.html`)**
+
+- Introduces AimOlive’s purpose.
+- Contains buttons for:
+  - PPDT Arena
+  - TAT Arena
+  - SSB PDFs section
+
+### 📖 **About Page (`about.html`)**
+
+- Story behind AimOlive.
+- Mission, Vision, and Creator details.
+- Includes social media links:
+  - [Portfolio](https://sumanisfr.github.io/My-Portfolio/)
+  - [LinkedIn](https://www.linkedin.com/in/suman-kumar-ghosh/)
+  - [GitHub](https://github.com/sumanisfr)
+  - [Instagram](https://instagram.com/suman_kumar_ghosh_77)
+  - [Gmail](mailto:sumankumarghosh94@gmail.com)
+
+### 📘 **All Practice PDFs (`ALL-PRACTICE_PDF.html`)**
+
+- Displays organized links to:
+  - Books
+  - OIR tests
+  - PPDT images
+  - Psychological test materials (TAT, WAT, SRT)
+  - GTO Tasks
+- All accessible with a single click.
+
+---
+
+## 💡 Motivation
+
+> “While learning web development, I wanted to build something meaningful — something that contributes to the defense aspirant community. AimOlive is a reflection of that dream — combining my love for technology, discipline, and service.”
+
+— **Suman Kumar Ghosh**, Creator of AimOlive
+
+---
 
 ## 👨‍💻 About the Creator
 
-This project was built and is maintained by **Suman Kumar Ghosh** ([@sumanisfr](https://github.com/sumanisfr)).
+**Suman Kumar Ghosh**  
+B.Tech (CSE) @ **IGIT, Sarang (Batch 2027)**  
+🎯 Aspiring **Defense Officer** & **Cybersecurity Specialist**  
+🥋 **Purple Belt Martial Artist**, 🥉 **Odisha State Thai Boxing Medalist**  
+💻 Passionate about **AI/ML, Web Development, and Cybersecurity**
 
-I'm a B.Tech Computer Science student (9.18 CGPA), AI/ML enthusiast, GSSOC Mentor, and defence aspirant. This project is my way of combining my passion for technology with my deep respect for the armed forces community.
+### 🌐 Connect With Me
 
-🔗 **Connect with me:**
-
-* **Portfolio:** [sumanisfr.github.io/My-Portfolio/](https://sumanisfr.github.io/My-Portfolio/)
-* **LinkedIn:** [linkedin.com/in/suman-kumar-ghosh/](https://www.linkedin.com/in/suman-kumar-ghosh/)
-* **LeetCode:** [leetcode.com/sumanisfr/](https://leetcode.com/sumanisfr/)
+| Platform | Link |
+|-----------|------|
+| 🌍 **Portfolio** | [sumanisfr.github.io/My-Portfolio](https://sumanisfr.github.io/My-Portfolio/) |
+| 💼 **LinkedIn** | [linkedin.com/in/suman-kumar-ghosh](https://www.linkedin.com/in/suman-kumar-ghosh/) |
+| 🧑‍💻 **GitHub** | [github.com/sumanisfr](https://github.com/sumanisfr) |
+| 📸 **Instagram** | [instagram.com/suman_kumar_ghosh_77](https://instagram.com/suman_kumar_ghosh_77) |
+| 📧 **Email** | [sumankumarghosh94@gmail.com](mailto:sumankumarghosh94@gmail.com) |
 
 ---
 
 ## ⚠️ Disclaimer
 
-This website does not provide coaching, tips, or any guarantee of SSB recommendation. It is a self-practice tool. All materials linked are assumed to be owned by the user.
+> This platform is **not affiliated** with any official SSB organization.  
+> AimOlive is a **practice-only** project that provides resources and timed practice opportunities.  
+> It **does not offer coaching, guidance, or guaranteed recommendation** for SSB selection.
+
+---
+
+## 🧾 License
+
+This project is licensed under the **MIT License** — you’re free to use, modify, and share it with credit.  
+© 2025 **AimOlive** by [Suman Kumar Ghosh](https://github.com/sumanisfr)
+
+---
+
+### 🌟 Acknowledgment
+
+Dedicated to all **defense aspirants** striving for excellence.  
+Built with ❤️, discipline, and the Olive dream. 🇮🇳
+
+---
