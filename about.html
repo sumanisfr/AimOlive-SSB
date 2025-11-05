@@ -15,9 +15,12 @@
   <link rel="icon" type="image/png" href="favicon/favicon-32x32.png">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Raleway', sans-serif;
-      background-color: #fdfdfd;
+      background-color: #f4f7f6; /* Softer background */
       color: #2b2b2b;
       padding-top: 70px; /* Account for fixed-top navbar */
     }
@@ -34,8 +37,8 @@
     .navbar-toggler {
       border: 1px solid rgba(255,255,255,0.5);
     }
-    .navbar-toggler-icon { /* Replaced by FontAwesome */
-      display: none;
+    .navbar-toggler-icon { 
+      display: none; /* Hide default, we use FontAwesome */
     }
 
     /* About Section */
@@ -44,7 +47,7 @@
       color: #3C5B34;
       text-align: center;
       font-size: 2.8rem;
-      margin-top: 30px; /* Reduced margin */
+      margin-top: 30px;
     }
     .about-subheading {
       color: #2d4723;
@@ -52,6 +55,7 @@
       font-family: 'Ubuntu', sans-serif;
       border-left: 4px solid #3C5B34;
       padding-left: 10px;
+      margin-bottom: 1rem;
     }
     .about-writeup {
       color: #333;
@@ -64,14 +68,36 @@
       margin: 40px auto;
     }
 
+    /* New Benefits List */
+    .benefits-list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+    .benefits-list li {
+      position: relative;
+      padding-left: 45px;
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+    }
+    .benefits-list .icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1.8rem;
+      color: #3C5B34;
+    }
+    .benefits-list strong {
+      color: #2d4723;
+    }
+
     /* Profile Section Card */
     .profile-section {
-      background-color: #f6f8f6;
+      background-color: #ffffff;
       border-radius: 12px;
       padding: 25px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      /* Sticky on desktop */
       position: sticky;
       top: 90px;
     }
@@ -105,12 +131,12 @@
       color: white;
       border-radius: 8px;
       font-weight: bold;
-      transition: 0.3s;
+      transition: all 0.3s ease;
       border: none;
     }
     .btn-custom-green:hover {
       background-color: #2a3d22;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
@@ -118,39 +144,46 @@
     .footer-content {
       background-color: #3C5B34;
       color: white;
-      padding: 25px 10px;
+      padding: 30px 10px;
       font-family: 'Ubuntu', sans-serif;
       margin-top: 50px;
     }
     .footer-content h5 {
-        font-size: 1rem;
-        font-weight: 400;
-        color: #ffc107;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #ffc107;
     }
     .footer-content h6 {
-      margin-top: 10px;
+      margin-top: 15px;
       color: #cfcfcf;
       font-size: 0.9rem;
     }
     .made-by {
-      color: white; /* Changed from red */
+      color: white;
       font-weight: bold;
     }
     .footer-content a {
-        color: #ffd700;
-        transition: 0.3s;
+      color: #ffd700;
+      transition: 0.3s;
     }
     .footer-content a:hover {
-        color: #fff;
+      color: #fff;
     }
     .footer-icon {
-        color: #ffd700;
-        margin-left: 5px;
+      color: #ffd700;
+      margin-left: 5px;
+      transition: 0.3s;
     }
     .footer-icon:hover {
-        color: #fff;
+      color: #fff;
     }
 
+    @media (max-width: 991px) {
+      .profile-section {
+        position: static; /* Remove sticky on mobile/tablet */
+        margin-top: 30px;
+      }
+    }
     @media (max-width: 768px) {
       body {
         padding-top: 60px;
@@ -161,10 +194,6 @@
       .profile-pic {
         width: 100px;
         height: 100px;
-      }
-      .profile-section {
-        position: static; /* Remove sticky on mobile */
-        margin-top: 30px;
       }
     }
   </style>
@@ -200,49 +229,73 @@
 
     <div class="row">
       <div class="col-lg-8">
-        <section class="mb-4">
+        <section class="mb-5">
           <h2 class="about-subheading">What is AimOlive?</h2>
           <p class="about-writeup mt-3">
             <strong>AimOlive</strong> is a non-profit platform created by <strong>Suman Kumar Ghosh</strong> to help
             <strong>SSB aspirants</strong> improve their <strong>PPDT</strong> and <strong>TAT</strong> story writing skills
-            [cite_start]through time-bound, self-paced practice sessions. [cite: 2]
+            through time-bound, self-paced practice sessions.
             <br><br>
             It aims to build the qualities of observation, imagination, and decision-making
-            — the essential traits of an officer.
-            <br><br>
-            <strong>AimOlive</strong> doesn’t provide coaching or tips; it provides the arena for you to practice, evaluate, and improve yourself.
+            — the essential traits of an officer. This platform doesn’t provide coaching or tips; it provides the arena for you to practice, evaluate, and improve yourself.
           </p>
         </section>
 
-        <hr class="my-4">
-
+        <section class="mb-5">
+          <h2 class="about-subheading">Our Mission & Benefits</h2>
+          <p class="about-writeup mt-3">
+            This project is built on the belief that disciplined self-assessment is the key to success. Our mission is to provide a free, accessible, and realistic tool for every defence aspirant.
+          </p>
+          <ul class="benefits-list">
+            <li>
+              <i class="fas fa-book-open icon"></i>
+              <strong>Comprehensive Library:</strong> Access a huge, organized collection of all SSB materials (OIR, TAT, WAT, SRT, GTO) in one place, saving you time.
+            </li>
+            <li>
+              <i class="fas fa-stopwatch icon"></i>
+              <strong>Realistic Simulation:</strong> Practice PPDT & TAT with time constraints that mimic the real exam, training your mind to perform under pressure.
+            </li>
+            <li>
+              <i class="fas fa-lock-open icon"></i>
+              <strong>100% Free & Open:</strong> No logins, no fees, no subscriptions. This platform is built for the community, by a member of the community.
+            </li>
+            <li>
+              <i class="fas fa-laptop-house icon"></i>
+              <strong>Self-Paced Learning:</strong> Practice anytime, anywhere. Review your own stories and track your improvement without external pressure.
+            </li>
+          </ul>
+        </section>
         <section>
           <h2 class="about-subheading">How It Started</h2>
           <p class="about-writeup mt-3">
-            [cite_start]While learning <strong>Full-Stack Web Development</strong>[cite: 10, 11], I wanted to build something that could
-            serve a real purpose — to contribute to the <strong>defense aspirant community</strong>.
+            While learning <strong>Full-Stack Web Development</strong>, I wanted to build something that could
+            serve a real purpose. As a defence aspirant myself, I wanted to contribute to the
+            <strong>aspirant community</strong>.
             <br><br>
-            That’s how <strong>AimOlive</strong> was born — with the mission to help aspirants train their minds
+            That’s how <strong>AimOlive</strong> was born — with the mission to help fellow aspirants train their minds
             and improve through disciplined, smart practice.
           </p>
         </section>
 
-        <div class="text-center d-lg-none mt-4"> <a href="index.html"><button class="btn btn-custom-green btn-lg mt-3">← Back to Home</button></a>
+        <div class="text-center d-lg-none mt-5"> <a href="index.html"><button class="btn btn-custom-green btn-lg mt-3">← Back to Home</button></a>
         </div>
       </div>
 
       <div class="col-lg-4 mt-4 mt-lg-0">
         <div class="profile-section">
-          <img src="images/profile.jpg" alt="Suman Kumar Ghosh" class="profile-pic" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNDNUIzNCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0yMCAyMWE4IDggMCAwIDAtMTYgMCIvPjxjaXJjbGUgY3g9IjEyIiBjeT0iOSIgcj0iNCIvPjwvc3ZnPg=='; this.onerror=null;">
+          
+          <img src="https://www.gravatar.com/avatar/5d8c6d31b016256f6f21c17b01962b9c?s=150&d=mp" 
+               alt="Suman Kumar Ghosh" 
+               class="profile-pic">
           
           <h3>👨‍💻 About the Creator</h3>
           
           <p class="about-writeup" style="text-align: left; font-size: 0.95rem;">
-            [cite_start]I’m <strong>Suman Kumar Ghosh</strong> [cite: 2][cite_start], a B.Tech Computer Science student at <strong>IGIT, Sarang</strong> (Class of 2027) with a <strong>9.18 CGPA</strong> and ranked in the <strong>top 5%</strong> of my class. [cite: 34, 36, 40]
+            I’m <strong>Suman Kumar Ghosh</strong>, a B.Tech Computer Science student at <strong>IGIT, Sarang</strong> (Batch of 2027). 
             <br><br>
-            [cite_start]I am passionate about the intersection of technology and national service, specializing in <strong>AI/ML</strong> and <strong>Cybersecurity</strong>. [cite: 5, 6, 13] This project is my way of combining my development skills with my deep respect for the defence community.
+            I am passionate about the intersection of technology and national service, specializing in <strong>AI/ML</strong> and <strong>Cybersecurity</strong>. This project is my way of combining my development skills with my deep respect for the defence community.
             <br><br>
-            [cite_start]Outside of academics, I'm a <strong>GSSOC Mentor</strong> [cite: 40][cite_start], a <strong>State-level NCC TSC representative</strong> [cite: 41][cite_start], and an <strong>Odisha State Thai Boxing Bronze Medalist</strong>[cite: 42].
+            Outside of academics, I'm a <strong>GSSOC Mentor</strong> , a <strong>State-level NCC TSC representative</strong>and an <strong>Odisha State Thai Boxing Bronze Medalist</strong>.
           </p>
 
           <h4 class="mt-4" style="color:#2d4723; font-family: 'Ubuntu', sans-serif;">🔗 Connect with Me</h4>
@@ -251,11 +304,11 @@
             <a href="https://www.linkedin.com/in/suman-kumar-ghosh/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/sumanisfr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
             <a href="https://leetcode.com/sumanisfr/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
-            [cite_start]<a href="mailto:sumankumarghosh94@gmail.com" title="Email"><i class="fas fa-envelope"></i></a> [cite: 3]
+            <a href="mailto:sumankumarghosh94@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
 
-         <div class="text-center d-none d-lg-block"> <a href="index.html"><button class="btn btn-custom-green btn-lg mt-4">← Back to Home</button></a>
+         <div class="text-center d-none d-lg-block"> <a href="index.html"><button class="btn btn-custom-green btn-lg mt-4">← Back to Home</Suman Kumar Ghoshbutton></a>
         </div>
       </div>
     </div>
@@ -266,7 +319,7 @@
   <div class="footer-content text-center">
     <h5>⚠️ DISCLAIMER: This website does not provide coaching or guarantee SSB recommendation.</h5>
     <p class="mt-3">
-      Built with ❤️ and discipline by <span class="made-by">Suman Kumar Ghosh</span>
+      Built with ❤️ and discipline by <span class="made-by">Suman Kumar Ghosh</span
       <a href="https://github.com/sumanisfr" target="_blank" title="GitHub Profile">
         <i class="fab fa-github footer-icon"></i>
       </a>
