@@ -1,334 +1,427 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="About AimOlive and its creator Suman Kumar Ghosh. A free SSB preparation platform built by a defence aspirant for defence aspirants.">
+  <title>AimOlive | Mission Briefing</title>
 
-  <title>About | AimOlive</title>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Ubuntu:wght@700&family=Raleway:wght@500&display=swap" rel="stylesheet">
-
-  <link rel="icon" type="image/png" href="favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chakra+Petch:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    html {
-      scroll-behavior: smooth;
+    :root {
+      --od-green: #1b4d3e;       /* Deep Hunter Green */
+      --tactical-tan: #ffc107;   /* Signal Gold */
+      --dark-bg: #111;
+      --light-bg: #f8f9fa;
     }
+
     body {
-      font-family: 'Raleway', sans-serif;
-      background-color: #f4f7f6; /* Softer background */
-      color: #2b2b2b;
-      padding-top: 70px; /* Account for fixed-top navbar */
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: var(--light-bg);
+      background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      color: #212529;
+      line-height: 1.6;
     }
 
-    /* Navbar */
+    /* === NAVIGATION === */
     .navbar {
-      background-color: #3C5B34;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: linear-gradient(135deg, #111, var(--od-green));
+      border-bottom: 3px solid var(--tactical-tan);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
-    .navbar-brand, .nav-link {
-      color: #fff !important;
-      font-weight: bold;
+    .navbar-brand {
+      font-family: 'Black Ops One', cursive;
+      letter-spacing: 1.5px;
+      color: var(--tactical-tan) !important;
     }
-    .navbar-toggler {
-      border: 1px solid rgba(255,255,255,0.5);
+    .nav-link {
+      color: rgba(255,255,255,0.9) !important;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s;
     }
-    .navbar-toggler-icon { 
-      display: none; /* Hide default, we use FontAwesome */
+    .nav-link:hover, .nav-item.active .nav-link {
+      color: var(--tactical-tan) !important;
+    }
+    .dropdown-menu {
+      background-color: #222;
+      border: 1px solid var(--tactical-tan);
+    }
+    .dropdown-item {
+      color: #eee;
+      font-family: 'Chakra Petch', sans-serif;
+      padding: 10px 20px;
+    }
+    .dropdown-item:hover {
+      background-color: var(--od-green);
+      color: var(--tactical-tan);
     }
 
-    /* About Section */
-    .about-heading {
-      font-family: 'Orbitron', sans-serif;
-      color: #3C5B34;
+    /* === HEADER SECTION === */
+    .page-header {
+      background: linear-gradient(rgba(0, 20, 0, 0.8), rgba(0, 20, 0, 0.9)), url('images/ssb-bg.jpg') center/cover fixed;
+      color: white;
+      padding: 120px 0 80px;
       text-align: center;
-      font-size: 2.8rem;
-      margin-top: 30px;
+      border-bottom: 4px solid var(--tactical-tan);
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+      margin-bottom: 60px;
     }
-    .about-subheading {
-      color: #2d4723;
-      font-weight: bold;
-      font-family: 'Ubuntu', sans-serif;
-      border-left: 4px solid #3C5B34;
-      padding-left: 10px;
-      margin-bottom: 1rem;
+    .page-title {
+      font-family: 'Black Ops One', cursive;
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      color: var(--tactical-tan);
+      text-shadow: 0px 0px 20px rgba(255, 193, 7, 0.4);
     }
-    .about-writeup {
-      color: #333;
-      line-height: 1.8;
-      font-size: 1.1rem;
-    }
-    hr.section-divider {
-      border-top: 2px solid #3C5B34;
-      width: 90%;
-      margin: 40px auto;
+    .page-subtitle {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 1.5rem;
+      color: #e0e0e0;
+      letter-spacing: 2px;
     }
 
-    /* New Benefits List */
+    /* === CONTENT SECTIONS === */
+    .section-title {
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 800;
+        color: var(--od-green);
+        border-left: 6px solid var(--tactical-tan);
+        padding-left: 20px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .content-text {
+        font-size: 1.15rem;
+        color: #444;
+        margin-bottom: 40px;
+    }
+
+    /* === TACTICAL ADVANTAGES LIST === */
     .benefits-list {
-      list-style-type: none;
-      padding-left: 0;
-      margin-top: 20px;
+        list-style: none;
+        padding: 0;
     }
     .benefits-list li {
-      position: relative;
-      padding-left: 45px;
-      font-size: 1.05rem;
-      margin-bottom: 20px;
+        margin-bottom: 20px;
+        padding: 25px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        display: flex;
+        align-items: flex-start;
+        transition: all 0.3s ease;
+        border-left: 5px solid var(--od-green);
     }
-    .benefits-list .icon {
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-size: 1.8rem;
-      color: #3C5B34;
+    .benefits-list li:hover {
+        transform: translateX(10px);
+        border-left-color: var(--tactical-tan);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
-    .benefits-list strong {
-      color: #2d4723;
+    .benefits-list i {
+        font-size: 2.5rem;
+        color: var(--od-green);
+        margin-right: 25px;
+        transition: all 0.3s;
+    }
+    .benefits-list li:hover i {
+        color: var(--tactical-tan);
+        transform: scale(1.1);
+    }
+    .benefit-content h5 {
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 800;
+        margin-bottom: 10px;
+        color: #222;
+        text-transform: uppercase;
     }
 
-    /* Profile Section Card */
-    .profile-section {
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 25px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 90px;
+    /* === CREATOR DOSSIER (Profile Card) === */
+    .profile-card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px -10px rgba(0,0,0,0.2);
+        overflow: hidden;
+        position: sticky;
+        top: 100px;
     }
-    .profile-section h3 {
-      font-family: 'Ubuntu', sans-serif;
-      color: #3C5B34;
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+    .profile-header {
+        background: linear-gradient(135deg, var(--od-green), #111);
+        padding: 40px 20px 30px;
+        text-align: center;
+        color: white;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
     }
-    .profile-pic {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      border: 4px solid #3C5B34;
-      object-fit: cover;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid var(--tactical-tan);
+        object-fit: cover;
+        margin-bottom: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .creator-name {
+        font-family: 'Black Ops One', cursive;
+        font-size: 2rem;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+        color: var(--tactical-tan);
+    }
+    .creator-title {
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        opacity: 0.9;
+        letter-spacing: 2px;
+        background: rgba(0,0,0,0.3);
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 20px;
+    }
+    .profile-body {
+        padding: 40px 30px;
+    }
+    .bio-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+    }
+    .bio-list li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        color: #333;
+        font-weight: 600;
+        font-size: 1.05rem;
+    }
+    .bio-list i {
+        width: 40px;
+        height: 40px;
+        background: rgba(27, 77, 62, 0.1);
+        color: var(--od-green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 15px;
+        font-size: 1.1rem;
+    }
+    .social-links {
+        display: flex;
+        justify-content: center;
+        padding-top: 25px;
+        border-top: 2px dashed #eee;
     }
     .social-links a {
-      margin: 0 10px;
-      font-size: 1.7rem;
-      color: #3C5B34;
-      transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background: var(--od-green);
+        color: var(--tactical-tan);
+        border-radius: 12px;
+        margin: 0 10px;
+        transition: all 0.3s;
+        font-size: 1.4rem;
+        text-decoration: none;
+        box-shadow: 0 5px 15px rgba(27, 77, 62, 0.3);
     }
     .social-links a:hover {
-      color: #2a3d22;
-      transform: scale(1.15) translateY(-3px);
-    }
-    .btn-custom-green {
-      background-color: #3C5B34;
-      color: white;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      border: none;
-    }
-    .btn-custom-green:hover {
-      background-color: #2a3d22;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        background: var(--tactical-tan);
+        color: var(--od-green);
+        transform: translateY(-5px) rotate(5deg);
     }
 
-    /* Footer */
-    .footer-content {
-      background-color: #3C5B34;
-      color: white;
-      padding: 30px 10px;
+    /* === FOOTER === */
+    .footer {
+      background: #151515;
+      color: #aaa;
+      padding: 60px 0 30px;
+      font-family: 'Chakra Petch', sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      border-top: 5px solid var(--tactical-tan);
+    }
+    .footer-heading {
       font-family: 'Ubuntu', sans-serif;
-      margin-top: 50px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--tactical-tan);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
     }
-    .footer-content h5 {
-      font-size: 1rem;
-      font-weight: 400;
-      color: #ffc107;
-    }
-    .footer-content h6 {
-      margin-top: 15px;
-      color: #cfcfcf;
-      font-size: 0.9rem;
-    }
-    .made-by {
-      color: white;
-      font-weight: bold;
-    }
-    .footer-content a {
-      color: #ffd700;
-      transition: 0.3s;
-    }
-    .footer-content a:hover {
-      color: #fff;
-    }
-    .footer-icon {
-      color: #ffd700;
-      margin-left: 5px;
-      transition: 0.3s;
-    }
-    .footer-icon:hover {
-      color: #fff;
+    .footer hr {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      width: 40%;
+      margin: 35px auto;
     }
 
+    /* Mobile Tweaks */
     @media (max-width: 991px) {
-      .profile-section {
-        position: static; /* Remove sticky on mobile/tablet */
-        margin-top: 30px;
-      }
+        .profile-card { position: static; margin-top: 60px; }
     }
     @media (max-width: 768px) {
-      body {
-        padding-top: 60px;
-      }
-      .about-heading {
-        font-size: 2.2rem;
-      }
-      .profile-pic {
-        width: 100px;
-        height: 100px;
-      }
+      .page-title { font-size: 2.8rem; }
+      .page-subtitle { font-size: 1.2rem; }
+      .benefits-list li { flex-direction: column; text-align: left; }
+      .benefits-list i { margin-bottom: 15px; }
     }
   </style>
 </head>
-
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg">
-    <a class="navbar-brand" href="index.html">AimOlive</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars" style="color:white; font-size: 1.6rem;"></i>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="practiceDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Practice</a>
-          <div class="dropdown-menu" aria-labelledby="practiceDropdown">
-            <a class="dropdown-item" href="PPDT-arena.html">PPDT</a>
-            <a class="dropdown-item" href="TAT-arena.html">TAT</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="ALL-PRACTICE-PDF.html">All Practice PDFs</a>
-          </div>
-        </li>
-        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-medal mr-2"></i>AIMOLIVE
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">PRACTICE</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="PPDT-arena.html">PP&DT</a>
+              <a class="dropdown-item" href="TAT-arena.html">TAT</a>
+            </div>
+          </li>
+          <li class="nav-item active"><a class="nav-link" href="about.html" style="color: var(--tactical-tan) !important;">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="ALL-PRACTICE_PDF.html">SSB BOOKS</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <div class="container" style="margin-top: 30px;">
-    <h1 class="about-heading">About AimOlive</h1>
-    <hr class="section-divider">
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">MISSION BRIEFING</h1>
+      <p class="page-subtitle">PLATFORM INTEL & CREATOR DOSSIER</p>
+    </div>
+  </header>
 
+  <main class="container">
     <div class="row">
-      <div class="col-lg-8">
-        <section class="mb-5">
-          <h2 class="about-subheading">What is AimOlive?</h2>
-          <p class="about-writeup mt-3">
-            <strong>AimOlive</strong> is a non-profit platform created by <strong>Suman Kumar Ghosh</strong> to help
-            <strong>SSB aspirants</strong> improve their <strong>PPDT</strong> and <strong>TAT</strong> story writing skills
-            through time-bound, self-paced practice sessions.
-            <br><br>
-            It aims to build the qualities of observation, imagination, and decision-making
-            — the essential traits of an officer. This platform doesn’t provide coaching or tips; it provides the arena for you to practice, evaluate, and improve yourself.
-          </p>
-        </section>
+        
+        <div class="col-lg-7">
+            <section>
+                <h2 class="section-title">OBJECTIVE: AIMOLIVE</h2>
+                <p class="content-text">
+                    <strong>AimOlive</strong> was forged from a simple realization: while the will to serve the nation is abundant, high-quality, accessible resources for SSB psychological testing are scarce. 
+                    <br><br>
+                    This platform is not a commercial academy. It is a specialized digital arena designed to sharpen the perceptual and creative reflexes of defence aspirants through rigorous, time-bound simulations.
+                </p>
+            </section>
 
-        <section class="mb-5">
-          <h2 class="about-subheading">Our Mission & Benefits</h2>
-          <p class="about-writeup mt-3">
-            This project is built on the belief that disciplined self-assessment is the key to success. Our mission is to provide a free, accessible, and realistic tool for every defence aspirant.
-          </p>
-          <ul class="benefits-list">
-            <li>
-              <i class="fas fa-book-open icon"></i>
-              <strong>Comprehensive Library:</strong> Access a huge, organized collection of all SSB materials (OIR, TAT, WAT, SRT, GTO) in one place, saving you time.
-            </li>
-            <li>
-              <i class="fas fa-stopwatch icon"></i>
-              <strong>Realistic Simulation:</strong> Practice PPDT & TAT with time constraints that mimic the real exam, training your mind to perform under pressure.
-            </li>
-            <li>
-              <i class="fas fa-lock-open icon"></i>
-              <strong>100% Free & Open:</strong> No logins, no fees, no subscriptions. This platform is built for the community, by a member of the community.
-            </li>
-            <li>
-              <i class="fas fa-laptop-house icon"></i>
-              <strong>Self-Paced Learning:</strong> Practice anytime, anywhere. Review your own stories and track your improvement without external pressure.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2 class="about-subheading">How It Started</h2>
-          <p class="about-writeup mt-3">
-            While learning <strong>Full-Stack Web Development</strong>, I wanted to build something that could
-            serve a real purpose. As a defence aspirant myself, I wanted to contribute to the
-            <strong>aspirant community</strong>.
-            <br><br>
-            That’s how <strong>AimOlive</strong> was born — with the mission to help fellow aspirants train their minds
-            and improve through disciplined, smart practice.
-          </p>
-        </section>
+            <section>
+                <h2 class="section-title">TACTICAL ADVANTAGES</h2>
+                <ul class="benefits-list">
+                    <li>
+                        <i class="fas fa-stopwatch-20"></i>
+                        <div class="benefit-content">
+                            <h5>COMBAT-REALISTIC TIMING</h5>
+                            <p class="mb-0">Our automated timers (30s observation / 4m writing) exactly replicate the pressure of the actual SSB testing environment, building your mental endurance.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-archive"></i>
+                        <div class="benefit-content">
+                            <h5>CENTRALIZED INTEL ARMORY</h5>
+                            <p class="mb-0">Stop searching. Access a massive, organized library of OIR, PPDT, TAT, WAT, SRT, and GTO materials in one secure location.</p>
+                        </div>
+                    </li>
+                     <li>
+                        <i class="fas fa-user-shield"></i>
+                        <div class="benefit-content">
+                            <h5>ZERO-FRICTION PRIVACY</h5>
+                            <p class="mb-0">No logins. No tracking. No fees. Your practice data is yours alone. Train immediately, anytime, anywhere.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
 
-        <div class="text-center d-lg-none mt-5"> <a href="index.html"><button class="btn btn-custom-green btn-lg mt-3">← Back to Home</button></a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0">
-        <div class="profile-section">
-          
-          <img src="https://www.gravatar.com/avatar/5d8c6d31b016256f6f21c17b01962b9c?s=150&d=mp" 
-               alt="Suman Kumar Ghosh" 
-               class="profile-pic">
-          
-          <h3>👨‍💻 About the Creator</h3>
-          
-          <p class="about-writeup" style="text-align: left; font-size: 0.95rem;">
-            I’m <strong>Suman Kumar Ghosh</strong>, a B.Tech Computer Science student at <strong>IGIT, Sarang</strong> (Batch of 2027). 
-            <br><br>
-            I am passionate about the intersection of technology and national service, specializing in <strong>AI/ML</strong> and <strong>Cybersecurity</strong>. This project is my way of combining my development skills with my deep respect for the defence community.
-            <br><br>
-            Outside of academics, I'm a <strong>GSSOC Mentor</strong> , a <strong>,Defence Aspirant</strong> Sprinter and an <strong>Odisha State Thai Boxing Bronze Medalist</strong>.
-          </p>
-
-          <h4 class="mt-4" style="color:#2d4723; font-family: 'Ubuntu', sans-serif;">🔗 Connect with Me</h4>
-          <div class="social-links mt-3">
-            <a href="https://sumanisfr.github.io/My-Portfolio/" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
-            <a href="https://www.linkedin.com/in/suman-kumar-ghosh/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/sumanisfr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://leetcode.com/sumanisfr/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
-            <a href="mailto:sumankumarghosh94@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-          </div>
+            <section>
+                <h2 class="section-title">THE CREATOR'S VISION</h2>
+                <p class="content-text" style="font-size: 1.25rem; font-style: italic; border-left: 4px solid var(--tactical-tan); padding-left: 20px; background: #fff; padding: 20px;">
+                    "I built AimOlive because I needed it myself. As a <strong>Defence Aspirant</strong> who is also passionate about <strong>Technology</strong>, I saw an opportunity to use my coding skills to serve our community. This project is my contribution to every candidate who dreams of earning the uniform."
+                </p>
+            </section>
         </div>
 
-         <div class="text-center d-none d-lg-block"> <a href="index.html"><button class="btn btn-custom-green btn-lg mt-4">← Back to Home</Suman Kumar Ghoshbutton></a>
+        <div class="col-lg-5">
+            <div class="profile-card">
+                <div class="profile-header">
+                     <img src="https://www.gravatar.com/avatar/5d8c6d31b016256f6f21c17b01962b9c?s=300&d=mp" alt="Suman Kumar Ghosh" class="profile-img">
+                     <h3 class="creator-name">SUMAN KUMAR GHOSH</h3>
+                     <div class="creator-title">DEFENCE ASPIRANT | TECH ENTHUSIAST</div>
+                </div>
+                <div class="profile-body">
+                    <ul class="bio-list">
+                        <li>
+                            <i class="fas fa-graduation-cap"></i> 
+                            <span>B.Tech CSE, IGIT Sarang (2027)</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-laptop-code"></i> 
+                            <span>Full-Stack & AI/ML Specialist</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-shield-alt"></i> 
+                            <span>Cybersecurity Researcher</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-medal"></i> 
+                            <span>NCC Cadet & Athlete</span>
+                        </li>
+                         <li>
+                            <i class="fas fa-fist-raised"></i> 
+                            <span>State Thai Boxing Medalist</span>
+                        </li>
+                    </ul>
+
+                    <div class="social-links">
+                        <a href="https://github.com/sumanisfr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/suman-kumar-ghosh/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:sumankumarghosh94@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://leetcode.com/sumanisfr/" target="_blank" title="LeetCode"><i class="fas fa-code"></i></a>
+                        <a href="https://sumanisfr.github.io/My-Portfolio/" target="_blank" title="Portfolio"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <h2 class="footer-heading">DISCLAIMER</h2>
+      <p style="max-width: 600px; margin: 0 auto;">This website is a self-preparation tool and does not offer coaching, tips, or guarantee of recommendation.</p>
+      <hr>
+      <p class="footer-quote">"HEARTY IS HIS APPROBATION AND LAVISH IN HIS PRAISE."</p>
+      <div class="mt-5">
+        <h6 style="color: #777;">© 2025 AimOlive | All Rights Reserved</h6>
+        <p class="mt-2" style="color: #fff;">Made with ❤️ & 🇮🇳 by <strong style="color: var(--tactical-tan);">sumanisfr</strong></p>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <br><br>
-
-  <div class="footer-content text-center">
-    <h5>⚠️ DISCLAIMER: This website does not provide coaching or guarantee SSB recommendation.</h5>
-    <p class="mt-3">
-      Built with ❤️ and discipline by <span class="made-by">Suman Kumar Ghosh</span
-      <a href="https://github.com/sumanisfr" target="_blank" title="GitHub Profile">
-        <i class="fab fa-github footer-icon"></i>
-      </a>
-    </p>
-    <h6>© 2025 AimOlive | All Rights Reserved</h6>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

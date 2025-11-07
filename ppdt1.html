@@ -1,222 +1,575 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AimOlive | PPDT Practice</title>
 
-   <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chakra+Petch:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
-   <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --od-green: #3a4b2c;       /* Deep Indian Army Green */
+      --tactical-tan: #d2b48c;   /* Desert Tan */
+      --alert-red: #e74c3c;
+      --tech-cyan: #00ffcc;      /* For AI highlights */
+    }
 
-    <!-- googlefonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Roboto+Slab:wght@800&family=Roboto:ital@1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
+    body {
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: #f0f2ed;
+      background-image: radial-gradient(#3a4b2c 0.5px, transparent 0.5px), radial-gradient(#3a4b2c 0.5px, #f0f2ed 0.5px);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
+      color: #333;
+    }
 
-    <title>PP&DT 1</title>
+    /* === 1. TACTICAL NAVBAR === */
+    .navbar {
+      background: linear-gradient(90deg, var(--od-green), #232d1a);
+      border-bottom: 4px solid var(--tactical-tan);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .navbar-brand {
+      font-family: 'Black Ops One', cursive;
+      letter-spacing: 1.5px;
+      color: var(--tactical-tan) !important;
+    }
+    .badge-rank {
+      background: rgba(0,0,0,0.3);
+      border: 1px solid var(--tactical-tan);
+      color: var(--tactical-tan);
+      padding: 5px 12px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
 
-    <!-- css-link -->
-    <link rel="stylesheet" href="css\practise-set.css">
-<!-- C:\Users\user\Desktop\THE-ARENA\css\practise-set.css -->
+    /* === 2. MAIN MISSION CONTAINER === */
+    .mission-container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      border: none;
+      border-top: 5px solid var(--od-green);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .mission-header {
+      background: #222;
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--od-green);
+    }
+    .mission-title {
+      font-family: 'Black Ops One', cursive;
+      font-size: 1.4rem;
+      color: var(--tactical-tan);
+    }
 
-<!-- favicon-link -->
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    /* --- Operations Area --- */
+    .mission-body { padding: 20px 30px; }
 
-<!-- google-fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:wght@500&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-<!-- font-family: 'Orbitron', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Ubuntu', sans-serif; -->
+    .img-intel-box {
+      background: #000;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .img-intel {
+      width: 100%;
+      max-height: 450px;
+      object-fit: contain;
+      filter: sepia(20%) contrast(110%) brightness(90%);
+      border: 1px solid #333;
+    }
 
-  </head>
-  <body>
+    /* --- Modern Timers --- */
+    .timer-display {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--od-green);
+      text-align: center;
+      margin: 15px 0;
+      text-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
 
+    /* --- Buttons --- */
+    .btn-tactical {
+      background: var(--od-green);
+      color: white;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    .btn-tactical:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px -10px rgba(58, 75, 44, 0.5);
+      color: var(--tactical-tan);
+    }
+    /* New Skip Button Style */
+    .btn-skip {
+      background: transparent;
+      border: none;
+      color: #6c757d;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn-skip:hover { color: var(--alert-red); }
 
-    <!-- navbar -->
+    /* === 3. AI ASSISTANT (MAJOR OLIVE) === */
+    .ai-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .ai-chat-box {
+      background: rgba(18, 18, 18, 0.95);
+      backdrop-filter: blur(10px);
+      border-left: 3px solid var(--tech-cyan);
+      color: #eee;
+      padding: 15px;
+      border-radius: 10px 10px 2px 10px;
+      max-width: 300px;
+      margin-bottom: 10px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 0.95rem;
+      display: none; /* Hidden initially */
+      animation: slideInRight 0.4s ease-out;
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    .ai-avatar {
+      width: 60px;
+      height: 60px;
+      background: var(--od-green);
+      border-radius: 50%;
+      border: 2px solid var(--tech-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--tech-cyan);
+      font-size: 1.8rem;
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .ai-avatar:hover { transform: scale(1.1); }
+    .ai-typing {
+      font-style: italic;
+      color: var(--tech-cyan);
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+    }
 
+    /* === 4. CLASSIFIED FOLDER === */
+    .classified-folder {
+      background: #fdf5e6;
+      border: 1px solid #d4c5b9;
+      position: relative;
+      margin-top: 50px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    .folder-tab {
+      position: absolute;
+      top: -30px;
+      left: 0;
+      background: var(--alert-red);
+      color: white;
+      padding: 5px 20px;
+      font-family: 'Black Ops One', cursive;
+      font-size: 0.9rem;
+      border-radius: 5px 5px 0 0;
+    }
+    .folder-body {
+      padding: 40px;
+      font-family: 'Courier New', monospace;
+      line-height: 1.6;
+      background-image: repeating-linear-gradient(transparent, transparent 27px, #e5e5e5 28px);
+    }
 
-    <div class="banner">
-        <nav class="navbar navbar-expand-lg navbar-light">
+    /* === 5. NEW FOOTER (User Requested) === */
+    .footer {
+      background-color: #3C5B34; /* From user's other file */
+      color: white;
+      padding: 40px 20px;
+      font-family: 'Chakra Petch', sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .footer-heading {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ffd700; /* Gold warning color */
+      text-transform: uppercase;
+    }
+    .footer hr {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      width: 60%;
+    }
+    .footer h6 {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
 
-            <a class="navbar-brand">Arena</a>
+    /* Utility */
+    .hidden { display: none !important; }
+    .pulse-alert { animation: pulse-red 1s infinite; color: var(--alert-red); }
+    @keyframes pulse-red { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
 
+    /* Mobile Tweaks */
+    @media (max-width: 768px) {
+      .mission-body { padding: 15px; }
+      .timer-display { font-size: 2.8rem; }
+      .ai-chat-box { max-width: 85vw; font-size: 0.9rem; }
+      .footer-heading { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
 
-          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-           <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li  class="nav-item">
-              <a  class="nav-link" href="">Home</a>
-            </li>
-            <li  class="nav-item dropdown">
-              <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Practise</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="C:/Users/user/Desktop/THE ARENA/PPDT-arena.html">PP&DT</a>
-          <a class="dropdown-item" href="C:/Users/user/Desktop/THE ARENA/TAT-arena.html">TAT</a>
-                </div>
-            </li>
-            <li  class="nav-item">
-              <a class="nav-link" href="">About</a>
-            </li>
-          </ul>
-        </div> -->
-        <hr>
-        </nav>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-medal mr-2" aria-hidden="true"></i>AIMOLIVE
+    </a>
+    <span class="badge-rank"> SSB TERMINAL</span>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="mission-container" role="main">
+    <div class="mission-header">
+      <span class="mission-title"><i class="fas fa-crosshairs" aria-hidden="true"></i> OP: PPDT ALPHA</span>
+      <span class="text-white-50 font-weight-bold">STATUS: STANDBY</span>
+    </div>
+
+    <div class="mission-body">
+      
+      <div id="briefingArea" class="alert alert-secondary" style="border-left: 4px solid var(--od-green); background: #e9ecef;">
+        <h5 style="color: var(--od-green); font-weight: bold;">BRIEFING:</h5>
+        <p class="mb-0">Observe the picture for <strong>30 seconds</strong>. Note the number of characters, age, gender, and mood. You will then have <strong>4 minutes</strong> to write a constructive story.</p>
       </div>
-        <!-- <br>
-        <a href="C:\Users\user\Desktop\THE ARENA\htmlfile\PPDT-set.html"><button type="button" class="btn btn-primary btn-lg btn-back" >Back</button></a> -->
-        <br>
-        <br>
+
+      <div class="text-center mt-5">
+        <button id="btnInitiate" class="btn btn-tactical btn-lg px-5" aria-controls="observationPhase writingPhase" aria-pressed="false">
+          <i class="fas fa-play-circle" aria-hidden="true"></i> INITIATE TEST SEQUENCE
+        </button>
+      </div>
+
+      <div id="observationPhase" class="hidden mt-4" aria-hidden="true">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+           <span class="badge badge-warning p-2"><i class="fas fa-eye" aria-hidden="true"></i> OBSERVATION MODE</span>
+           <span id="obsTimer" class="font-weight-bold" style="font-size: 1.5rem; color: var(--od-green);" aria-live="polite">00:30</span>
+        </div>
+        <div class="img-intel-box">
+           <img src="ppdtpics/ppdt1.jpg" alt="Observation image for PPDT" id="targetImage" class="img-intel">
+        </div>
+        <div class="progress mt-3" style="height: 8px;">
+          <div id="obsProgressBar" class="progress-bar bg-warning" style="width: 100%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"></div>
+        </div>
+        <div class="text-center mt-3">
+          <button id="btnSkipObs" class="btn btn-skip" aria-label="Skip observation"><i class="fas fa-forward" aria-hidden="true"></i> SKIP OBSERVE</button>
+        </div>
+      </div>
+
+      <div id="writingPhase" class="hidden mt-5" aria-hidden="true">
+        <div class="text-center mb-4">
+           <div class="badge badge-primary p-2 mb-3"><i class="fas fa-pen" aria-hidden="true"></i> WRITING MODE</div>
+           <h2 class="text-muted">INTEL REMOVED</h2>
+           <div id="writeTimer" class="timer-display" aria-live="polite">04:00</div>
+        </div>
+        
+        <div class="progress mb-4" style="height: 10px;">
+          <div id="writeProgressBar" class="progress-bar bg-success" style="width: 100%;" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"></div>
+        </div>
+
+        <textarea id="storyArea" class="form-control rounded-0" rows="10" placeholder="Start typing your story here... (This is for your practice only, data is not saved)" style="background: #f8f9fa; border: 2px solid #e9ecef; resize: none;"></textarea>
+        
+        <div class="text-center mt-3">
+          <button id="btnSkipWrite" class="btn btn-skip" aria-label="Skip writing and show answer"><i class="fas fa-forward" aria-hidden="true"></i> SKIP WRITING & SEE ANSWER</button>
+        </div>
+      </div>
+
+      <div id="missionComplete" class="hidden mt-5 text-center" aria-hidden="true">
+         <div class="alert alert-danger py-4">
+           <h3 class="font-weight-bold m-0"><i class="fas fa-stop-circle" aria-hidden="true"></i> TEST TERMINATED</h3>
+           <p>PENS DOWN IMMEDIATELY.</p>
+         </div>
+
+         <div class="row justify-content-center">
+           <div class="col-md-8">
+              <button id="btnDeclassify" class="btn btn-dark btn-block py-3 font-weight-bold" style="border-bottom: 4px solid var(--tech-cyan);">
+                <i class="fas fa-unlock-alt" aria-hidden="true"></i> DECLASSIFY MODEL STORY
+              </button>
+              <div class="row mt-3">
+                 <div class="col-6">
+                    <button onclick="location.reload()" class="btn btn-outline-secondary btn-block">RETRY</button>
+                 </div>
+                 <div class="col-6">
+                    <a href="ppdt2.html" class="btn btn-tactical btn-block">NEXT <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                 </div>
+              </div>
+           </div>
+         </div>
+
+         <div id="intelFolder" class="classified-folder text-left hidden" aria-hidden="true">
+            <div class="folder-tab">TOP SECRET // MODEL INTEL</div>
+            <div class="folder-body">
+              <h5 style="color: var(--od-green); text-transform: uppercase; font-weight: 700;">Recommended Storyline:</h5>
+              <p><strong>Character:</strong> Vikram (26), Junior Engineer.</p>
+              <p><strong>Situation:</strong> Village power outage due to cyclone.</p>
+              <p><strong>Action Taken:</strong> Vikram immediately mobilized his technical team despite the severe weather. He divided them into two specialized squads: one for clearing debris and one for line repair. Coordinating with HQ for backup materials, he led from the front, working continuously for 8 hours to restore power to the hospital first, then the rest of the village.</p>
+            </div>
+         </div>
+      </div>
+
+    </div> </div>
+</div>
+
+<div class="ai-container">
+  <div id="aiChatBox" class="ai-chat-box" role="status" aria-live="polite" aria-atomic="true">
+     <div class="ai-typing">Major Olive is typing...</div>
+     <span id="aiMessage">Welcome, Candidate. I am Major Olive, your AI assessor. Initiate the test when ready. Best of luck.</span>
+  </div>
+  <div class="ai-avatar" id="aiAvatar" onclick="toggleAiChat()" role="button" aria-label="Toggle Major Olive chat">
+     <i class="fas fa-robot" aria-hidden="true"></i>
+  </div>
+</div>
 
 <section>
-  <div class="reveal">
-    <br>
-    <center>
-      <h1>PRACTISE SET 1</h1>
-      </center>
-      <hr>
-
-      <div class="instructions-part-one">
-        <p class="part-one">Picture will be shown here.</p>
-        <hr>
-        <center>
-          <b>Remember your '30 seconds' will start as soon as you press the reveal button</b>
-        </center>
-       </p>
-
-      </div>
-
-    <center>
-      <div class="picture">
-    <img src="ppdtpics\ppdt1.jpg" alt="" class="ppdtpic">
-    <br><br>
-      </div>
-      </center>
-
-<p class="btn-time">30sec</p>
-
-      <center>
-        <button type="button" class="btn btn-outline-primary btn-lg btn-img reveal-button">Reveal Picture</button>
-      </center>
-
-  </div>
-</section>
-
-
-
-        <br>
-
-
-        <section>
-
-          <div class="writing">
-          <b>
-            <p class= "writing-title">Writing Part Starts here.</p>
-          </b>
-          <hr>
-            <p class="writing-para">
-              <b>Your '4 minutes' will start as soon as you click the 'Start writing' button</b>
-            </p>
-
-            <br>
-
-            <center>
-              <button type="button" class="btn btn-outline-primary btn-lg btn-img writing-button">Start Writing</button>
-            </center>
-
-<br>
-
-<p class="timer">04 : 00 min</p>
-
-            <br>
-
-          <div class="timeOver">
-            <center>
-              TIME'S UP
-            </center>
-          </div>
-
-
-            <br>
-
-            <div class="request-integrity">
-
-            <center>
-              <b><p>Be true to yourself , You are expected to have a decent level  of Integrity.
-               <br>
-               If you didnt complete it on time practise more.
-              </p></b>
-            </center>
-
-            <br>
-
-            <center>
-              <a href="ppdt2.html"><button type="button" class="btn btn-outline-primary btn-lg btn-img inst-practise-btn">Next Picture</button></a>
-            </center>
-
-            </div>
-
-            <br>
-
-          <!-- <center>
-            <button type="button" class="btn btn-outline-primary btn-lg btn-img completed-button">
-              Competed
-            </button>
-
-          </center> -->
-
-
-            <br>
-
-
-            <br>
-
-          </div>
-        </section>
-
-
-<br>
-<hr>
-<br>
-
-
-  <!-- footer -->
-  <section>
-    <div class="footer">
-      <div class="footer-content" style="margin:10px;">
+  <div class="footer">
+    <div class="container">
         <center>
           <h2 class="footer-heading">DISCLAIMER - THE WEBSITE DONT OFFER ANY COACHING AND TIPS OR INSTRUCTIONS FOR GETTING RECOMMENDED.</h2>
         </center>
-          <hr>
+        <hr>
         <center>
           Built and maintained by a person who is,
-                                             HEARTY IS HIS APPROBATION AND LAVISH IN HIS PRAISE.
-                                             <br><br>
-                                             <h6>Copyright 2020</h6>
+          HEARTY IS HIS APPROBATION AND LAVISH IN HIS PRAISE.
+          <br><br>
+          <h6>Copyright 202</h6> <br>
+          <p>Made by <strong>sumanisfr❤️</strong></p>
         </center>
-
-      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // --- Global Timers ---
+  let obsInterval = null;
+  let writeInterval = null;
+
+  // --- AI ASSISTANT LOGIC ---
+  const aiChatBox = document.getElementById('aiChatBox');
+  const aiMessage = document.getElementById('aiMessage');
+  const aiTyping = document.querySelector('.ai-typing');
+  let aiTimeout;
+
+  function aiSpeak(message, autoHide = true) {
+    clearTimeout(aiTimeout);
+    aiChatBox.style.display = 'block';
+    aiTyping.style.display = 'block';
+    aiMessage.style.opacity = '0.5';
+
+    setTimeout(() => {
+       aiTyping.style.display = 'none';
+       aiMessage.style.opacity = '1';
+       aiMessage.innerHTML = message;
+       
+       if(autoHide) {
+         aiTimeout = setTimeout(() => {
+           aiChatBox.style.display = 'none';
+         }, 8000); // Hide after 8 seconds
+       }
+    }, 600);
+  }
+  
+  function toggleAiChat() {
+     aiChatBox.style.display = (aiChatBox.style.display === 'none' || aiChatBox.style.display === '') ? 'block' : 'none';
+  }
+
+  // Initial AI Greeting
+  setTimeout(() => { aiSpeak("Welcome, Candidate. I am <strong>Major Olive</strong>. Click 'INITIATE' when you are ready. Stay focused.", false); }, 1000);
 
 
+  // --- TEST LOGIC ---
+  const OBS_TIME = 30;
+  const WRITE_TIME = 240; 
+  const btnInitiate = document.getElementById('btnInitiate');
+  const briefingArea = document.getElementById('briefingArea');
+  const obsPhase = document.getElementById('observationPhase');
+  const writePhase = document.getElementById('writingPhase');
+  const endPhase = document.getElementById('missionComplete');
+  const obsTimer = document.getElementById('obsTimer');
+  const writeTimer = document.getElementById('writeTimer');
+  const obsProgress = document.getElementById('obsProgressBar');
+  const writeProgress = document.getElementById('writeProgressBar');
+  const btnDeclassify = document.getElementById('btnDeclassify');
+  const intelFolder = document.getElementById('intelFolder');
+  
+  // NEW Skip Buttons
+  const btnSkipObs = document.getElementById('btnSkipObs');
+  const btnSkipWrite = document.getElementById('btnSkipWrite');
+  const storyArea = document.getElementById('storyArea');
 
+  function formatTime(totalSeconds) {
+    const m = Math.floor(totalSeconds / 60);
+    const s = totalSeconds % 60;
+    const mm = m < 10 ? '0' + m : m;
+    const ss = s < 10 ? '0' + s : s;
+    return mm + ':' + ss;
+  }
 
+  btnInitiate.addEventListener('click', () => {
+    // Prevent double start
+    if (btnInitiate.disabled) return;
+    btnInitiate.disabled = true;
+    btnInitiate.setAttribute('aria-pressed', 'true');
+    btnInitiate.closest('.text-center').classList.add('hidden');
+    briefingArea.classList.add('hidden');
+    obsPhase.classList.remove('hidden');
+    obsPhase.setAttribute('aria-hidden', 'false');
 
+    // AI Trigger
+    aiSpeak("Observation started! Scan background, then main character. Look for age, gender, mood. Quick!");
 
+    let timeLeft = OBS_TIME;
+    // Set initial UI states
+    obsTimer.textContent = formatTime(timeLeft);
+    obsProgress.style.width = '100%';
+    obsProgress.setAttribute('aria-valuenow', 100);
 
+    obsInterval = setInterval(() => {
+      timeLeft--;
+      obsTimer.textContent = formatTime(timeLeft);
+      const pct = Math.max(0, (timeLeft / OBS_TIME) * 100);
+      obsProgress.style.width = pct + "%";
+      obsProgress.setAttribute('aria-valuenow', Math.round(pct));
 
+      if(timeLeft === 10) aiSpeak("10 seconds left! Finalize your perception.");
 
+      if(timeLeft <= 0) {
+        clearInterval(obsInterval);
+        endObsPhase();
+      }
+    }, 1000);
+  });
 
-<script src="javascript/ppdt.js" charset="utf-8"></script>
-  </body>
+  function endObsPhase() {
+    obsPhase.classList.add('hidden');
+    obsPhase.setAttribute('aria-hidden', 'true');
+    writePhase.classList.remove('hidden');
+    writePhase.setAttribute('aria-hidden', 'false');
+    
+    // AI Trigger
+    aiSpeak("Image removed. Start writing NOW. Define the problem. Keep the hero's actions logical.");
+
+    let timeLeft = WRITE_TIME;
+    writeTimer.textContent = formatTime(timeLeft);
+    writeProgress.style.width = '100%';
+    writeProgress.classList.remove('bg-danger','bg-warning');
+    writeProgress.classList.add('bg-success');
+    writeProgress.setAttribute('aria-valuenow', 100);
+    storyArea.focus();
+
+    writeInterval = setInterval(() => {
+      timeLeft--;
+      writeTimer.textContent = formatTime(timeLeft);
+      const pct = Math.max(0, (timeLeft / WRITE_TIME) * 100);
+      writeProgress.style.width = pct + "%";
+      writeProgress.setAttribute('aria-valuenow', Math.round(pct));
+      
+      if(timeLeft === 60) { // Trigger once at 1 min
+          writeProgress.classList.remove('bg-success');
+          writeProgress.classList.add('bg-warning');
+          aiSpeak("Last 1 minute! Start concluding your story with a positive outcome.");
+      }
+      if(timeLeft === 15) {
+           writeProgress.classList.remove('bg-warning');
+           writeProgress.classList.add('bg-danger');
+           writeTimer.classList.add('pulse-alert');
+      }
+
+      if(timeLeft <= 0) {
+        clearInterval(writeInterval);
+        endTest();
+      }
+    }, 1000);
+  }
+
+  function endTest() {
+    writePhase.style.opacity = '0.3';
+    document.querySelector('textarea').disabled = true;
+    endPhase.classList.remove('hidden');
+    endPhase.setAttribute('aria-hidden', 'false');
+    endPhase.scrollIntoView({behavior:'smooth', block:'center'});
+    
+    // AI Trigger
+    aiSpeak("Time is up. Pens down. You may now declassify the model story below for comparison.", false);
+  }
+
+  // --- NEW Skip Handlers ---
+  btnSkipObs.addEventListener('click', () => {
+    if (obsInterval) clearInterval(obsInterval);
+    endObsPhase();
+    aiSpeak("Observation skipped. Moving to writing phase.");
+  });
+  
+  btnSkipWrite.addEventListener('click', () => {
+    if (writeInterval) clearInterval(writeInterval);
+    endTest();
+    aiSpeak("Writing skipped. Moving to debrief.");
+  });
+
+  // --- Answer Handler ---
+  btnDeclassify.addEventListener('click', () => {
+    intelFolder.classList.remove('hidden');
+    intelFolder.setAttribute('aria-hidden', 'false');
+    btnDeclassify.innerHTML = '<i class="fas fa-check-double" aria-hidden="true"></i> INTEL DECLASSIFIED';
+    btnDeclassify.classList.remove('btn-dark');
+    btnDeclassify.classList.add('btn-success');
+    btnDeclassify.disabled = true;
+    
+    setTimeout(() => {
+        intelFolder.scrollIntoView({behavior:'smooth', block:'start'});
+    }, 200);
+  });
+
+  // Clean up on page unload to avoid lingering intervals
+  window.addEventListener('beforeunload', () => {
+    if (obsInterval) clearInterval(obsInterval);
+    if (writeInterval) clearInterval(writeInterval);
+    clearTimeout(aiTimeout);
+  });
+</script>
+</body>
 </html>

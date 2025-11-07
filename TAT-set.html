@@ -1,433 +1,306 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Completely free practise of SSB tat pictures for complete time bound practise with timer.
-30+ sets covering all variety of pictures for practising TAT and PPDT for SSB.">
-<meta name="keywords" content="Free,SSB preparation,TAT story writing,Service Selection Board,TAT pictures,TAT picture practise,TAT picture,TAT practise,free SSB practise,free ssb study material,timed practise">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Free TAT practice sets for SSB preparation. 50+ timed picture sets to improve thematic apperception skills.">
+  <meta name="keywords" content="SSB, TAT, Thematic Apperception Test, TAT Practice Sets, Defence Aspirant, SSB Preparation">
+  <title>AimOlive | TAT Mission Select</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chakra+Petch:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --od-green: #3a4b2c;       /* Deep Indian Army Green */
+      --tactical-tan: #d2b48c;   /* Desert Tan */
+      --alert-red: #e74c3c;
+      --tech-cyan: #00ffcc;      /* For AI highlights */
+      --dark-bg: #1a1a1a;
+    }
+
+    body {
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: #f0f2ed;
+      background-image: radial-gradient(#3a4b2c 0.5px, transparent 0.5px), radial-gradient(#3a4b2c 0.5px, #f0f2ed 0.5px);
+      background-size: 20px 20px;
+      color: #333;
+    }
+
+    /* === NAVIGATION === */
+    .navbar {
+      background: linear-gradient(90deg, var(--od-green), #232d1a);
+      border-bottom: 4px solid var(--tactical-tan);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .navbar-brand {
+      font-family: 'Black Ops One', cursive;
+      letter-spacing: 1.5px;
+      color: var(--tactical-tan) !important;
+    }
+    .nav-link {
+      color: rgba(255,255,255,0.8) !important;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+    .nav-link:hover { color: var(--tactical-tan) !important; }
+    .dropdown-menu {
+      background-color: var(--dark-bg);
+      border: 1px solid var(--tactical-tan);
+    }
+    .dropdown-item {
+      color: rgba(255,255,255,0.8);
+      font-family: 'Chakra Petch', sans-serif;
+    }
+    .dropdown-item:hover {
+      background-color: var(--od-green);
+      color: var(--tactical-tan);
+    }
+
+    /* === HEADER SECTION === */
+    .page-header {
+      background: linear-gradient(rgba(58, 75, 44, 0.9), rgba(35, 45, 26, 0.9)), url('images/ssb-bg.jpg') center/cover;
+      color: white;
+      padding: 80px 0 50px;
+      text-align: center;
+      border-bottom: 5px solid var(--tactical-tan);
+      margin-bottom: 40px;
+    }
+    .page-title {
+      font-family: 'Black Ops One', cursive;
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    }
+    .page-subtitle {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 1.3rem;
+      color: var(--tactical-tan);
+      letter-spacing: 1px;
+    }
+    .page-subtitle a {
+        color: var(--tech-cyan);
+        text-decoration: underline;
+    }
+
+    /* === MISSION GRID === */
+    .mission-section {
+        margin-bottom: 50px;
+    }
+    .section-title {
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 700;
+        color: var(--od-green);
+        border-left: 5px solid var(--tactical-tan);
+        padding-left: 15px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+    .mission-btn {
+        background: white;
+        border: 2px solid var(--od-green);
+        color: var(--od-green);
+        font-family: 'Black Ops One', cursive;
+        font-size: 1.1rem;
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    .mission-btn::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: var(--od-green);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease-out;
+    }
+    .mission-btn:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    .mission-btn:hover {
+        color: var(--tactical-tan);
+        box-shadow: 0 5px 15px rgba(58, 75, 44, 0.4);
+        border-color: var(--od-green);
+    }
+    .mission-btn.full-set {
+        background: var(--od-green);
+        color: white;
+        border: none;
+    }
+    .mission-btn.full-set:hover {
+        background: #2e3d23;
+        color: var(--tactical-tan);
+    }
+    /* Colors for Full Sets to differentiate */
+    .btn-set-1 { background: linear-gradient(135deg, #3a4b2c, #4b5e3a) !important; }
+    .btn-set-2 { background: linear-gradient(135deg, #8b5a2b, #a67c52) !important; border-color: #8b5a2b !important; }
+    .btn-set-3 { background: linear-gradient(135deg, #2c3e50, #34495e) !important; border-color: #2c3e50 !important; }
+    .btn-set-4 { background: linear-gradient(135deg, #7f8c8d, #95a5a6) !important; border-color: #7f8c8d !important; }
 
 
-   <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    /* === FOOTER === */
+    .footer {
+      background-color: var(--od-green);
+      color: rgba(255,255,255,0.8);
+      padding: 50px 20px;
+      font-family: 'Chakra Petch', sans-serif;
+      text-align: center;
+      margin-top: 80px;
+      border-top: 5px solid var(--tactical-tan);
+    }
+    .footer-heading {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--tactical-tan);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .footer hr {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      width: 50%;
+      margin: 30px auto;
+    }
+    .footer-quote {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
 
-   <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    /* Mobile Tweaks */
+    @media (max-width: 768px) {
+      .page-title { font-size: 2.2rem; }
+      .page-subtitle { font-size: 1rem; }
+      .mission-btn { font-size: 1rem; padding: 12px; }
+    }
+  </style>
+</head>
+<body>
 
-    <!-- googlefonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Roboto+Slab:wght@800&family=Roboto:ital@1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
-
-    <title>TAT free practise sets</title>
-
-    <!-- css-link -->
-    <link rel="stylesheet" href="css\home.css">
-
-
-<!-- favicon-link -->
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
-<!-- google-fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:wght@500&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-<!-- font-family: 'Orbitron', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Ubuntu', sans-serif; -->
-    <title></title>
-  </head>
-  <body>
-
-    <div class="banner">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-          <a class="navbar-brand">AimOlive</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li  class="nav-item">
-              <a  class="nav-link" href="index.html">Home</a>
-            </li>
-            <!-- <li  class="nav-item dropdown">
-              <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Practise</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="C:/Users/user/Desktop/THE ARENA/PPDT-arena.html">PP&DT</a>
-          <a class="dropdown-item" href="C:/Users/user/Desktop/THE ARENA/TAT-arena.html">TAT</a>
-                </div>
-            </li> -->
-            <li  class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-          </ul>
-        </div>
-        <hr>
-        </nav>
-
-        <br><br>
-
-          <center>
-            <h1>GO On! What Are You Waiting For</h1>
-            <br>
-            <h2>Hop in and start practising</h2>
-            <br>
-            <h2>To know more about how to attempt the TAT sets click-
-               <a href="tatinstructions.html">here</a>
-             </h2>
-          </center>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-medal mr-2"></i>AIMOLIVE
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">PRACTICE</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="PPDT-arena.html">PP&DT</a>
+              </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="ALL-PRACTICE_PDF.html">SSB BOOKS</a></li>
+        </ul>
       </div>
-<br>
-      <section>
-        <div class="sets">
-          <div class="container">
+    </div>
+  </nav>
 
-            <div class="container">
-              <br><br>
-              <h2>Full Practise Sets</h2>
-              <br>
-  <div class="row">
-    <div class="col">
-      <a href="tat1.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);" >TAT 1</button>
-</a>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">TAT Mission Select</h1>
+      <p class="page-subtitle">Choose your operation. Read the <a href="TAT-arena.html">TAT Briefing</a> first if you're new.</p>
     </div>
-    <div class="col">
-      <a href="tat2.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 2</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat3.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 3</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat4.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 4</button>
-</a>
-    </div>
-  </div>
+  </header>
 
-  <br><br>
-  <hr>
-  <br>
-  <h2>Single Picture Practise</h2>
-  <br>
-  <div class="row">
-    <div class="col">
-      <a href="tat5.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 5</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat6.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 6</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat7.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 7</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat8.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 8</button>
-</a>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col">
-      <a href="tat9.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 9</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat10.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 10</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat11.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 11</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat12.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 12</button>
-</a>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col">
-      <a href="tat13.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 13</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat14.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 14</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat15.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 15</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat16.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 16</button>
-</a>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col">
-      <a href="tat17.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 17</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat18.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 18</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat19.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 19</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat20.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 20</button>
-</a>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col">
-      <a href="tat21.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 21</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat22.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 22</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat23.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 23</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat24.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 24</button>
-</a>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col">
-      <a href="tat25.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 25</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat26.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 26</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat27.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 27</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="tat28.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 28</button>
-</a>
-    </div>
-  </div>
-
-  <br>
-  <h2>Coming Soon...</h2>
-  <br>
-
-
-  <div class="row">
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat29.html">  </a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 29</button>
-  </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat30.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 30</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat31.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 31</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat32.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 32</button>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat33.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 33</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat34.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 34</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat35.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 35</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat36.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 36</button>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat37.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 37</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat38.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 38</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat39.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 39</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat40.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 40</button>
-</a>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat41.html">
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 41</button>
-</a>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat42.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 42</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat43.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 43</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat44.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 44</button>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat45.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 45</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat46.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 46</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat47.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 47</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat48.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 48</button>
-    </div>
-  </div>
-
-  <br>
-
-  <div class="row">
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat49.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#3300ff,#3388ff);">TAT 49</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat50.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#ff9900,#ffcc00);">TAT 50</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat51.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#660099,#6633cc);">TAT 51</button>
-    </div>
-    <div class="col">
-      <a href="htmlfile\TATSETs\tat52.html"></a>
-      <button type="button" class="btn btn-light btn-lg set-button" style="background-image: linear-gradient(#cc0099,#cc6699);">TAT 52</button>
-    </div>
-  </div>
-
-</div>
-
-
-          </div>
-
-
+  <main class="container">
+    
+    <section class="mission-section">
+        <h3 class="section-title"><i class="fas fa-layer-group mr-2"></i> FULL 12-SLIDE SEQUENCES</h3>
+        <div class="row">
+            <div class="col-md-3 col-6">
+                <a href="tat1.html" class="text-decoration-none">
+                    <button class="mission-btn full-set btn-set-1">TAT ALPHA-01</button>
+                </a>
+            </div>
+            <div class="col-md-3 col-6">
+                <a href="tat2.html" class="text-decoration-none">
+                    <button class="mission-btn full-set btn-set-2">TAT ALPHA-02</button>
+                </a>
+            </div>
+            <div class="col-md-3 col-6">
+                <a href="tat3.html" class="text-decoration-none">
+                    <button class="mission-btn full-set btn-set-3">TAT ALPHA-03</button>
+                </a>
+            </div>
+            <div class="col-md-3 col-6">
+                <a href="tat4.html" class="text-decoration-none">
+                    <button class="mission-btn full-set btn-set-4">TAT ALPHA-04</button>
+                </a>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <br>
-
-      <!-- footer -->
-      <section>
-        <div class="footer">
-          <div class="footer-content" style="margin:10px;">
-            <center>
-              <h2 class="footer-heading">DISCLAIMER - THE WEBSITE DONT OFFER ANY COACHING AND TIPS OR INSTRUCTIONS FOR GETTING RECOMMENDED.</h2>
-            </center>
-              <hr>
-            <center>
-              Built and maintained by a person who is,
-                                                 HEARTY IS HIS APPROBATION AND LAVISH IN HIS PRAISE.
-                                                 <br><br>
-                                                 <h6>Copyright 2025</h6>
-            </center>
-
-          </div>
+    <section class="mission-section">
+        <h3 class="section-title"><i class="fas fa-image mr-2"></i> SINGLE PICTURE DRILLS (05 - 28)</h3>
+        <div class="row">
+            <script>
+                for (let i = 5; i <= 28; i++) {
+                    document.write(`
+                        <div class="col-md-3 col-4">
+                            <a href="tat${i}.html" class="text-decoration-none">
+                                <button class="mission-btn">TAT ${i < 10 ? '0' + i : i}</button>
+                            </a>
+                        </div>
+                    `);
+                }
+            </script>
         </div>
-      </section>
+    </section>
 
-  </body>
+    <section class="mission-section">
+        <h3 class="section-title"><i class="fas fa-images mr-2"></i> ADVANCED DRILLS (29 - 52)</h3>
+        <div class="row">
+             <script>
+                for (let i = 29; i <= 52; i++) {
+                    document.write(`
+                        <div class="col-md-3 col-4">
+                            <a href="tat${i}.html" class="text-decoration-none">
+                                <button class="mission-btn">TAT ${i}</button>
+                            </a>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <h2 class="footer-heading">DISCLAIMER</h2>
+      <p>This website is a self-preparation tool and does not offer coaching, tips, or guarantee of recommendation.</p>
+      <hr>
+      <p class="footer-quote">"HEARTY IS HIS APPROBATION AND LAVISH IN HIS PRAISE."</p>
+      <div class="mt-4">
+        <h6>© 2025 AimOlive | All Rights Reserved</h6>
+        <p class="mt-2">Made with ❤️ & 🇮🇳 by <strong>sumanisfr</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>

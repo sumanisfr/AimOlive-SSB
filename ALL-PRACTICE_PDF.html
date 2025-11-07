@@ -1,238 +1,425 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALL Practice PDFs | AimOlive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Comprehensive library of SSB preparation PDFs: OIR, PPDT, TAT, WAT, SRT, and GTO resources.">
+  <title>AimOlive | Intel Library</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chakra+Petch:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --od-green: #1b4d3e;       /* Deep Hunter Green */
+      --tactical-tan: #ffc107;   /* Signal Gold */
+      --alert-red: #dc3545;
+      --tech-cyan: #0ff;
+      --dark-bg: #111;
+      --light-bg: #f8f9fa;
+    }
+
     body {
-      font-family: 'Raleway', sans-serif;
-      background-color: #f8f9fa;
-      color: #222;
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: var(--light-bg);
+      background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      color: #212529;
+      line-height: 1.6;
     }
+
+    /* === NAVIGATION === */
     .navbar {
-      background-color: #3C5B34;
+      background: linear-gradient(135deg, #111, var(--od-green));
+      border-bottom: 3px solid var(--tactical-tan);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
-    .navbar-brand, .nav-link {
-      color: #fff !important;
-      font-weight: bold;
+    .navbar-brand {
+      font-family: 'Black Ops One', cursive;
+      letter-spacing: 1.5px;
+      color: var(--tactical-tan) !important;
+      text-shadow: 0px 0px 10px rgba(255, 193, 7, 0.3);
     }
-    .container {
-      margin-top: 90px;
+    .nav-link {
+      color: rgba(255,255,255,0.9) !important;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+    .nav-link:hover, .nav-item.active .nav-link {
+      color: var(--tactical-tan) !important;
+      text-shadow: 0px 0px 8px rgba(255, 193, 7, 0.5);
+    }
+    .dropdown-menu {
+      background-color: #222;
+      border: 1px solid var(--tactical-tan);
+    }
+    .dropdown-item {
+      color: #eee;
+      font-family: 'Chakra Petch', sans-serif;
+      padding: 10px 20px;
+    }
+    .dropdown-item:hover {
+      background-color: var(--od-green);
+      color: var(--tactical-tan);
+    }
+
+    /* === HEADER === */
+    .page-header {
+      background: linear-gradient(rgba(0, 20, 0, 0.85), rgba(0, 20, 0, 0.9)), url('images/ssb-bg.jpg') center/cover fixed;
+      color: white;
+      padding: 120px 0 80px;
+      text-align: center;
+      border-bottom: 4px solid var(--tactical-tan);
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
       margin-bottom: 60px;
     }
-    h2.section-title {
-      font-family: 'Ubuntu', sans-serif;
-      color: #3C5B34;
-      margin-top: 40px;
+    .page-title {
+      font-family: 'Black Ops One', cursive;
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      background: linear-gradient(to bottom, #fff, var(--tactical-tan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0px 0px 20px rgba(255, 193, 7, 0.3);
+    }
+    .page-subtitle {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 1.4rem;
+      color: #e0e0e0;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+
+    /* === TACTICAL SECTIONS === */
+    .tactical-card {
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin-bottom: 35px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .tactical-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    .tactical-header {
+      background: linear-gradient(135deg, var(--od-green), #0f2920);
+      color: white;
+      padding: 20px 25px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      border-bottom: 3px solid var(--tactical-tan);
+    }
+    .tactical-header i { 
+        margin-right: 15px; 
+        color: var(--tactical-tan); 
+        font-size: 1.6rem;
+    }
+    
+    /* Accordion Styles */
+    .card {
+        border: none !important;
+        border-radius: 0 !important;
     }
     .card-header {
-      background-color: #3C5B34;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
+        background-color: rgba(27, 77, 62, 0.05);
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+        padding: 0;
     }
-    .list-group-item {
-      background-color: #f8f9fa;
-      border: none;
+    .btn-link {
+        color: var(--od-green);
+        font-family: 'Chakra Petch', sans-serif;
+        font-weight: 700;
+        text-decoration: none !important;
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 18px 25px;
+        font-size: 1.2rem;
+        transition: all 0.2s;
     }
-    a.pdf-link {
-      color: #222;
-      text-decoration: none;
+    .btn-link:hover { 
+        background-color: rgba(255, 193, 7, 0.1);
+        color: #111; 
     }
-    a.pdf-link:hover {
-      color: #3C5B34;
-      text-decoration: underline;
+    .btn-link i { margin-right: 12px; }
+
+    /* File List Styles */
+    .file-list { list-style: none; padding: 0; margin: 0; }
+    .file-list li {
+        padding: 12px 25px;
+        border-bottom: 1px solid #eee;
+        background: #fff;
+        transition: all 0.2s ease;
     }
+    .file-list li:last-child { border-bottom: none; }
+    .file-list li:hover {
+        background-color: #f0f7f4;
+        padding-left: 35px;
+    }
+    .file-link {
+        color: #333;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 1.05rem;
+        transition: color 0.2s;
+    }
+    .file-link:hover { 
+        text-decoration: none; 
+        color: var(--od-green); 
+    }
+    .file-icon {
+        margin-right: 15px;
+        font-size: 1.3rem;
+        width: 30px;
+        text-align: center;
+        transition: transform 0.2s;
+    }
+    .file-link:hover .file-icon { transform: scale(1.2); }
+    .fa-file-pdf { color: var(--alert-red); }
+    .fa-file-image { color: #007bff; }
+    .fa-file-alt { color: #6c757d; }
+
+    /* Stage Titles */
+    .stage-title {
+        font-family: 'Black Ops One', cursive;
+        color: var(--od-green);
+        font-size: 2rem;
+        margin: 50px 0 25px;
+        padding-left: 20px;
+        border-left: 6px solid var(--tactical-tan);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+    /* === FOOTER === */
     .footer {
-      background-color: #3C5B34;
-      color: white;
+      background: #151515;
+      color: #aaa;
+      padding: 60px 0 30px;
+      font-family: 'Chakra Petch', sans-serif;
       text-align: center;
-      padding: 20px;
+      margin-top: 100px;
+      border-top: 5px solid var(--tactical-tan);
+    }
+    .footer-heading {
       font-family: 'Ubuntu', sans-serif;
-    }
-    .github-icon {
-      color: #ffd700;
-      margin-left: 5px;
       font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--tactical-tan);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
     }
-    /* Icon styling */
-    .fa-file-pdf { color: #dc3545; } /* Red for PDF */
-    .fa-file-image { color: #007bff; } /* Blue for Image */
-    .fa-file-alt { color: #6c757d; } /* Gray for other (like .md) */
-    
-    /* Ensure icons have a little space */
-    .fas, .fab {
-        margin-right: 8px;
+    .footer hr {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      width: 40%;
+      margin: 35px auto;
+    }
+
+    @media (max-width: 768px) {
+      .page-title { font-size: 2.5rem; }
+      .tactical-header { font-size: 1.2rem; padding: 15px 20px; }
+      .btn-link { font-size: 1.1rem; padding: 15px 20px; }
+      .file-link { font-size: 1rem; }
     }
   </style>
 </head>
-
 <body>
 
-  <nav class="navbar fixed-top navbar-expand-lg">
-    <a class="navbar-brand" href="#">AimOlive</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon" style="color:white; border:1px solid white; border-radius: 4px;">...</span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-medal mr-2"></i>AIMOLIVE
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">PRACTICE</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="PPDT-arena.html">PP&DT</a>
+              <a class="dropdown-item" href="TAT-arena.html">TAT</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li class="nav-item active"><a class="nav-link" href="ALL-PRACTICE_PDF.html" style="color: var(--tactical-tan) !important;">RESOURCES</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <div class="container">
-    <h1 class="text-center" style="color: #3C5B34; font-family: 'Ubuntu', sans-serif;">📘 ALL PRACTICE MATERIALS</h1>
-    <p class="text-center text-muted">All SSB practice PDFs and images organized in one place.</p>
-    <hr>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">Command Intel Library</h1>
+      <p class="page-subtitle">CLASSIFIED TRAINING MATERIALS & FIELD MANUALS</p>
+    </div>
+  </header>
 
-    <h2 class="section-title">📖 Books</h2>
-    <ul class="list-group">
-      <li class="list-group-item"><a href="SSB-Interview-main/Book/_plinth_to_paramount english vol.1.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> Plinth to Paramount English Vol.1</a></li>
-      <li class="list-group-item"><a href="SSB-Interview-main/Book/RS (AGARWAL) APPTITUDE.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> R.S. Aggarwal Aptitude</a></li>
-      <li class="list-group-item"><a href="SSB-Interview-main/Book/RS Aggarwal reasoning-English.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> R.S. Aggarwal Reasoning</a></li>
-      <li class="list-group-item"><a href="SSB-Interview-main/Book/SSB Interview_ The Complete Guide.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> SSB Interview – The Complete Guide</a></li>
-    </ul>
+  <main class="container">
 
-    <h2 class="section-title">📄 Documents</h2>
-    <ul class="list-group">
-      <li class="list-group-item"><a href="SSB-Interview-main/Documents/PIQ FORM.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> PIQ Form</a></li>
-    </ul>
-
-    <h2 class="section-title">🪖 Stage I</h2>
-
-    <div class="card mb-3">
-      <div class="card-header" data-toggle="collapse" data-target="#oirSection">OIR – Officer Intelligence Rating</div>
-      <div id="oirSection" class="collapse show">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/OIR/free-oir_PRACT.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> Free OIR Practice</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/OIR/Intelligence Test.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> Intelligence Test</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/OIR/Officer-Intelligence-Rating-Test-ebook.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> OIR eBook</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/OIR/OIR Test 05 By SSBCrack.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> OIR Test 05 (SSBCrack)</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/OIR/OIR-DEFENCE EDUCATION.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> OIR Defence Education</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/OIR/OIR.md" class="pdf-link" target="_blank"><i class="fas fa-file-alt"></i> OIR.md (Notes)</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/OIR/OIR.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> OIR.pdf</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/OIR/oir1-638.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> OIR Practice Set (oir1-638)</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/OIR/QUANT TRICKS.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> Quant Tricks</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/OIR/REASONING ABALITY.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> Reasoning Ability</a></li>
+    <div class="tactical-card">
+        <div class="tactical-header">
+            <i class="fas fa-book"></i> Training Manuals (Books)
+        </div>
+        <ul class="file-list">
+            <li><a href="SSB-Interview-main/Book/_plinth_to_paramount english vol.1.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> Plinth to Paramount English Vol.1</a></li>
+            <li><a href="SSB-Interview-main/Book/RS (AGARWAL) APPTITUDE.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> R.S. Aggarwal Aptitude</a></li>
+            <li><a href="SSB-Interview-main/Book/RS Aggarwal reasoning-English.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> R.S. Aggarwal Reasoning</a></li>
+            <li><a href="SSB-Interview-main/Book/SSB Interview_ The Complete Guide.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> SSB Interview – The Complete Guide</a></li>
         </ul>
-      </div>
     </div>
 
-    <div class="card mb-3">
-      <div class="card-header" data-toggle="collapse" data-target="#ppdtSection">PPDT – Picture Perception & Discussion Test</div>
-      <div id="ppdtSection" class="collapse">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage I/PPDT/PPDT.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> PPDT Instructions PDF</a></li>
-          <li class="list-group-item"><i class="fas fa-images"></i> PPDT Practice Images:</li>
-          <ul style="list-style:none; margin-left:15px;">
-                        <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT pdf</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-1.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-1.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-2.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-2.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-3.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-3.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-4.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-4.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-5.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-5.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-6.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-6.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-7.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-7.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-8.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-8.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-9.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-9.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-10.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-10.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-11.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-11.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-12.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-12.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-13.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-13.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-14.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-14.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-15.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-15.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-16.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-16.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-17.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-17.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-18.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-18.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-19.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-19.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-20.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-20.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-21.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-21.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-22.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-22.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-23.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-23.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-24.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-24.jpg</a></li>
-
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-25.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-25.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-26.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-26.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-27.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-27.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-28.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-28.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-29.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-29.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-30.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-30.jpg</a></li>
-
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-31.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-31.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-32.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-32.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-33.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-33.jpg</a></li>
-            <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-34.jpg" class="pdf-link" target="_blank"><i class="fas fa-file-image"></i> PPDT-34.jpg</a></li>
-
-          </ul>
+    <div class="tactical-card">
+        <div class="tactical-header">
+            <i class="fas fa-file-contract"></i> Official Documentation
+        </div>
+        <ul class="file-list">
+            <li><a href="SSB-Interview-main/Documents/PIQ FORM.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> Personal Information Questionnaire (PIQ) Form</a></li>
         </ul>
-      </div>
     </div>
 
-    <h2 class="section-title">🧠 Stage II</h2>
-
-    <div class="card mb-3">
-      <div class="card-header" data-toggle="collapse" data-target="#gtoSection">GTO Task</div>
-      <div id="gtoSection" class="collapse">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage II/GTO Task/En-crypted-GTO-e-book.protected-unlocked.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> Encrypted GTO eBook</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage II/GTO Task/lecturate.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> Lecturette Notes</a></li>
-          <li class="list-group-item"><a href="SSB-Interview-main/Stage II/GTO Task/Lecturette-eBook-Part-1-SSBCrack.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> Lecturette eBook (SSBCrack)</a></li>
-        </ul>
-      </div>
+    <h3 class="stage-title">STAGE I: SCREENING</h3>
+    <div id="accordionStage1" class="tactical-card p-0" style="border-radius: 15px; overflow: hidden;">
+        <div class="card">
+            <div class="card-header" id="headingOIR">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOIR" aria-expanded="true">
+                    <i class="fas fa-brain"></i> Officer Intelligence Rating (OIR)
+                </button>
+            </div>
+            <div id="collapseOIR" class="collapse show" data-parent="#accordionStage1">
+                <div class="card-body p-0">
+                    <ul class="file-list">
+                        <li><a href="SSB-Interview-main/Stage I/OIR/free-oir_PRACT.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> Free OIR Practice Set</a></li>
+                        <li><a href="SSB-Interview-main/Stage I/OIR/Intelligence Test.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> Intelligence Test Guide</a></li>
+                        <li><a href="SSB-Interview-main/Stage I/OIR/Officer-Intelligence-Rating-Test-ebook.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> OIR Complete eBook</a></li>
+                        <li><a href="SSB-Interview-main/Stage I/OIR/OIR Test 05 By SSBCrack.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> OIR Test 05 (SSBCrack)</a></li>
+                        <li><a href="SSB-Interview-main/Stage I/OIR/OIR-DEFENCE EDUCATION.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> OIR Defence Education Module</a></li>
+                        <li><a href="SSB-Interview-main/Stage I/OIR/OIR.md" class="file-link" target="_blank"><i class="fas fa-file-alt file-icon"></i> OIR Field Notes (.md)</a></li>
+                        <li><a href="SSB-Interview-main/Stage I/OIR/OIR.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> OIR Master File</a></li>
+                        <li><a href="SSB-Interview-main/Stage I/OIR/oir1-638.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> OIR Practice Drill 1-638</a></li>
+                        <li><a href="SSB-Interview-main/Stage I/OIR/QUANT TRICKS.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> Quantitative Tricks & Shortcuts</a></li>
+                        <li><a href="SSB-Interview-main/Stage I/OIR/REASONING ABALITY.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> Reasoning Ability Manual</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingPPDT">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsePPDT" aria-expanded="false">
+                    <i class="fas fa-eye"></i> Picture Perception & Discussion (PPDT)
+                </button>
+            </div>
+            <div id="collapsePPDT" class="collapse" data-parent="#accordionStage1">
+                <div class="card-body p-0">
+                    <ul class="file-list">
+                        <li><a href="SSB-Interview-main/Stage I/PPDT/PPDT.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> PPDT Official Instructions</a></li>
+                         <script>
+                            for(let i=1; i<=34; i++) {
+                                document.write(`<li><a href="SSB-Interview-main/Stage I/PPDT/PPDT-${i}.jpg" class="file-link" target="_blank"><i class="fas fa-file-image file-icon"></i> Training Image ALPHA-${i < 10 ? '0'+i : i}</a></li>`);
+                            }
+                         </script>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="card mb-3">
-      <div class="card-header" data-toggle="collapse" data-target="#psySection">Psychological Test</div>
-      <div id="psySection" class="collapse">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item" style="font-weight: bold; color: #3C5B34;">SRT (Situation Reaction Test)</li>
-          <ul style="list-style: none;">
-            <li><a href="SSB-Interview-main/Stage II/Psychological Test/SRT/180 SRT.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> 180 SRT Questions</a></li>
-            <li><a href="SSB-Interview-main/Stage II/Psychological Test/SRT/SRT-eBook-Part-1.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> SRT eBook Part 1</a></li>
-          </ul>
+    <h3 class="stage-title">STAGE II: PSYCH & GTO</h3>
+    <div id="accordionStage2" class="tactical-card p-0" style="border-radius: 15px; overflow: hidden;">
+        <div class="card">
+            <div class="card-header" id="headingGTO">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseGTO" aria-expanded="true">
+                   <i class="fas fa-running"></i> Ground Testing Officer (GTO) Tasks
+                </button>
+            </div>
+            <div id="collapseGTO" class="collapse show" data-parent="#accordionStage2">
+                <div class="card-body p-0">
+                    <ul class="file-list">
+                         <li><a href="SSB-Interview-main/Stage II/GTO Task/En-crypted-GTO-e-book.protected-unlocked.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> GTO Encrypted eBook (Unlocked)</a></li>
+                         <li><a href="SSB-Interview-main/Stage II/GTO Task/lecturate.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> Lecturette Topics & Guide</a></li>
+                         <li><a href="SSB-Interview-main/Stage II/GTO Task/Lecturette-eBook-Part-1-SSBCrack.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> Lecturette eBook Part 1</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingPsych">
+                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsePsych" aria-expanded="false">
+                    <i class="fas fa-brain"></i> Psychological Test Battery
+                 </button>
+            </div>
+            <div id="collapsePsych" class="collapse" data-parent="#accordionStage2">
+                <div class="card-body p-0">
+                    
+                    <div class="p-3 bg-light border-bottom">
+                        <h6 class="font-weight-bold text-muted"><i class="fas fa-bolt mr-2" style="color: var(--tactical-tan);"></i> SRT (Situation Reaction Test)</h6>
+                    </div>
+                    <ul class="file-list">
+                        <li><a href="SSB-Interview-main/Stage II/Psychological Test/SRT/180 SRT.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> 180 Practice Situations</a></li>
+                        <li><a href="SSB-Interview-main/Stage II/Psychological Test/SRT/SRT-eBook-Part-1.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> SRT Tactical eBook Part 1</a></li>
+                    </ul>
 
-          <li class="list-group-item" style="font-weight: bold; color: #3C5B34;">TAT (Thematic Apperception Test)</li>
-          <ul style="list-style: none;">
-            <li><a href="SSB-Interview-main/Stage II/Psychological Test/TAT/TAT OF ALL BOARDS.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> TAT of All Boards</a></li>
-            <li><a href="SSB-Interview-main/Stage II/Psychological Test/TAT/TAT Practice 2.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> TAT Practice 2</a></li>
-            <li><a href="SSB-Interview-main/Stage II/Psychological Test/TAT/TAT Practice.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> TAT Practice</a></li>
-            <li><a href="SSB-Interview-main/Stage II/Psychological Test/TAT/THEMATIC-APPERCEPTION-TEST-PART-1-SSBCRACK.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> Thematic Apperception Test (SSBCrack)</a></li>
-          </ul>
+                    <div class="p-3 bg-light border-bottom border-top">
+                        <h6 class="font-weight-bold text-muted"><i class="fas fa-images mr-2" style="color: var(--tactical-tan);"></i> TAT (Thematic Apperception Test)</h6>
+                    </div>
+                    <ul class="file-list">
+                        <li><a href="SSB-Interview-main/Stage II/Psychological Test/TAT/TAT OF ALL BOARDS.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> TAT Collection (All Boards)</a></li>
+                        <li><a href="SSB-Interview-main/Stage II/Psychological Test/TAT/TAT Practice 2.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> TAT Practice Set BRAVO</a></li>
+                        <li><a href="SSB-Interview-main/Stage II/Psychological Test/TAT/TAT Practice.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> TAT Practice Set CHARLIE</a></li>
+                        <li><a href="SSB-Interview-main/Stage II/Psychological Test/TAT/THEMATIC-APPERCEPTION-TEST-PART-1-SSBCRACK.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> TAT Master Guide Part 1</a></li>
+                    </ul>
 
-          <li class="list-group-item" style="font-weight: bold; color: #3C5B34;">WAT (Word Association Test)</li>
-          <ul style="list-style: none;">
-            <li><a href="SSB-Interview-main/Stage II/Psychological Test/WAT/WAT PRAC.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> WAT Practice</a></li>
-            <li><a href="SSB-Interview-main/Stage II/Psychological Test/WAT/WAT.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> WAT Book</a></li>
-            <li><a href="SSB-Interview-main/Stage II/Psychological Test/WAT/Wat2.pdf" class="pdf-link" target="_blank"><i class="fas fa-file-pdf"></i> WAT Practice 2</a></li>
-          </ul>
-        </ul>
-      </div>
+                    <div class="p-3 bg-light border-bottom border-top">
+                        <h6 class="font-weight-bold text-muted"><i class="fas fa-font mr-2" style="color: var(--tactical-tan);"></i> WAT (Word Association Test)</h6>
+                    </div>
+                    <ul class="file-list">
+                        <li><a href="SSB-Interview-main/Stage II/Psychological Test/WAT/WAT PRAC.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> WAT Practice Drill</a></li>
+                        <li><a href="SSB-Interview-main/Stage II/Psychological Test/WAT/WAT.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> WAT Standard Book</a></li>
+                        <li><a href="SSB-Interview-main/Stage II/Psychological Test/WAT/Wat2.pdf" class="file-link" target="_blank"><i class="fas fa-file-pdf file-icon"></i> WAT Supplemental Set</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+
+  </main>
 
   <footer class="footer">
-    <p>Made with ❤️ by <span class="text-warning"></span>
-      <a href="about.html" target="_blank">
-        <i class="fab fa-profile github-icon">sumanisfr ❤️</i>
-      </a>
-    </p>
-    <p>© 2025 AimOlive | All Rights Reserved</p>
+    <div class="container">
+      <h2 class="footer-heading">DISCLAIMER</h2>
+      <p>This library is for self-training purposes only. Not officially affiliated with any selection board.</p>
+      <hr>
+      <p class="footer-quote">"HEARTY IS HIS APPROBATION AND LAVISH IN HIS PRAISE."</p>
+      <div class="mt-5">
+        <h6 style="color: #777;">© 2025 AimOlive | All Rights Reserved</h6>
+        <p class="mt-2" style="color: #fff;">Made with ❤️ & 🇮🇳 by <strong style="color: var(--tactical-tan);">sumanisfr</strong></p>
+      </div>
+    </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

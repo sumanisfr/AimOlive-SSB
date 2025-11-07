@@ -1,186 +1,299 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Detailed instructions for practicing PPDT online. Learn the timed procedure for observation and story writing.">
+  <meta name="keywords" content="PPDT Instructions, SSB Practice, Picture Perception Test, Online PPDT, Defence Aspirant Guide">
+  <title>AimOlive | PPDT Standard Operating Procedure</title>
 
-   <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chakra+Petch:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
-   <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --od-green: #3a4b2c;       /* Deep Indian Army Green */
+      --tactical-tan: #d2b48c;   /* Desert Tan */
+      --alert-red: #e74c3c;
+      --tech-cyan: #00ffcc;      /* For AI highlights */
+      --dark-bg: #1a1a1a;
+    }
 
-    <!-- googlefonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Roboto+Slab:wght@800&family=Roboto:ital@1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
+    body {
+      font-family: 'Roboto Condensed', sans-serif;
+      background-color: #f0f2ed;
+      background-image: radial-gradient(#3a4b2c 0.5px, transparent 0.5px), radial-gradient(#3a4b2c 0.5px, #f0f2ed 0.5px);
+      background-size: 20px 20px;
+      color: #333;
+      line-height: 1.6;
+    }
 
-    <title>PP&DT-Instructions</title>
+    /* === NAVIGATION === */
+    .navbar {
+      background: linear-gradient(90deg, var(--od-green), #232d1a);
+      border-bottom: 4px solid var(--tactical-tan);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .navbar-brand {
+      font-family: 'Black Ops One', cursive;
+      letter-spacing: 1.5px;
+      color: var(--tactical-tan) !important;
+    }
+    .nav-link {
+      color: rgba(255,255,255,0.8) !important;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+    .nav-link:hover { color: var(--tactical-tan) !important; }
+    .dropdown-menu {
+      background-color: var(--dark-bg);
+      border: 1px solid var(--tactical-tan);
+    }
+    .dropdown-item {
+      color: rgba(255,255,255,0.8);
+      font-family: 'Chakra Petch', sans-serif;
+    }
+    .dropdown-item:hover {
+      background-color: var(--od-green);
+      color: var(--tactical-tan);
+    }
 
-    <!-- css-link -->
-    <link rel="stylesheet" href="css\practise-set.css">
+    /* === HEADER SECTION === */
+    .page-header {
+      background: linear-gradient(rgba(58, 75, 44, 0.9), rgba(35, 45, 26, 0.9)), url('images/ssb-bg.jpg') center/cover;
+      color: white;
+      padding: 100px 0 60px;
+      text-align: center;
+      border-bottom: 5px solid var(--tactical-tan);
+      margin-bottom: 50px;
+    }
+    .page-title {
+      font-family: 'Black Ops One', cursive;
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    }
+    .page-subtitle {
+      font-family: 'Chakra Petch', sans-serif;
+      font-size: 1.5rem;
+      color: var(--tactical-tan);
+      letter-spacing: 1px;
+    }
 
+    /* === CONTENT CARDS === */
+    .info-card {
+      background: #fff;
+      border: none;
+      border-left: 5px solid var(--od-green);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(58, 75, 44, 0.15);
+    }
+    .card-header-custom {
+      background: var(--od-green);
+      color: white;
+      padding: 15px 25px;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+    }
+    .card-header-custom i {
+      margin-right: 15px;
+      color: var(--tactical-tan);
+    }
+    .card-body-custom {
+      padding: 30px;
+      font-size: 1.1rem;
+      color: #555;
+    }
 
-<!-- favicon-link -->
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    /* === CTA BUTTON === */
+    .btn-tactical-lg {
+      background: var(--od-green);
+      color: white;
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+      padding: 20px 60px;
+      border: none;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -10px rgba(58, 75, 44, 0.6);
+    }
+    .btn-tactical-lg::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(to bottom right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+      transform: rotate(45deg);
+      transition: all 0.5s;
+    }
+    .btn-tactical-lg:hover::after {
+      left: 100%;
+      top: 100%;
+    }
+    .btn-tactical-lg:hover {
+      transform: translateY(-5px) scale(1.02);
+      background-color: #2e3d23;
+      color: var(--tactical-tan);
+      box-shadow: 0 20px 40px -10px rgba(58, 75, 44, 0.8);
+    }
 
-<!-- google-fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:wght@500&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-<!-- font-family: 'Orbitron', sans-serif;
-font-family: 'Raleway', sans-serif;
-font-family: 'Ubuntu', sans-serif; -->
+    /* === FOOTER === */
+    .footer {
+      background-color: var(--od-green);
+      color: rgba(255,255,255,0.8);
+      padding: 50px 20px;
+      font-family: 'Chakra Petch', sans-serif;
+      text-align: center;
+      margin-top: 80px;
+      border-top: 5px solid var(--tactical-tan);
+    }
+    .footer-heading {
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--tactical-tan);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .footer hr {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      width: 50%;
+      margin: 30px auto;
+    }
+    .footer-quote {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
 
-  </head>
-  <body>
+    /* Mobile Tweaks */
+    @media (max-width: 768px) {
+      .page-title { font-size: 2.2rem; }
+      .page-subtitle { font-size: 1.1rem; }
+      .card-header-custom { font-size: 1.2rem; }
+      .btn-tactical-lg { padding: 15px 30px; font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
 
-
-    <!-- navbar -->
-
-
-    <div class="banner">
-        <nav class="navbar navbar-expand-lg navbar-light">
-
-            <a class="navbar-brand">AimOlive</a>
-
-
-          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-           <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li  class="nav-item">
-              <a  class="nav-link" href="">Home</a>
-            </li>
-            <li  class="nav-item dropdown">
-              <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Practise</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="C:/Users/user/Desktop/THE ARENA/PPDT-arena.html">PP&DT</a>
-          <a class="dropdown-item" href="C:/Users/user/Desktop/THE ARENA/TAT-arena.html">TAT</a>
-                </div>
-            </li>
-            <li  class="nav-item">
-              <a class="nav-link" href="">About</a>
-            </li>
-          </ul>
-        </div> -->
-        <hr>
-        </nav>
-      </div>
-        <br>
-
-<section>
-  <div class="reveal">
-
-    <center>
-      <h1>Instructions To Perform PP&DT</h1>
-      </center>
-      <hr>
-
-      <p class="instructions-part-one">The interface to practise PP&DT can be divided into two parts.
-        <br>
-        1. Observing The picture.
-        <br>
-        2.Writing the Story.
-        <br>
-      (  Well the discussion is not possible here yet.)
-      <br><br>
-      <b>Also in case you want to restart you can simply refresh the page.</b>
-      </p>
-      <br>
-      <hr><br>
-
-      <div class="instructions-part-one">
-        <p><b>Observing the picture</b></p>
-        <p>Your will get access to the picture once you click the reveal
-          picture button on the interface.And as soon as you click the
-          button a picture will appear and the timer will start.You will
-          have 30 seconds to observe the picture and as soon as the time
-          strikes 0 seconds.The picture will disapper.
-          <br><br>
-          <b>Remember your '30 seconds' will start as soon as you press the reveal button</b>
-       </p>
-
-      </div>
-
-</section>
-
-        <br>
-
-        <section>
-
-          <div class="writing">
-          <b>
-            <p class= "writing-title">Writing Part Starts here.</p>
-          </b>
-          <hr>
-
-
-            <p class="writing-para">
-                Grab your pen and paper to write the story.
-            </p>
-
-            <p class="writing-para">Once your 30 seconds are over.You will
-              will have '4 minutes' for writing the story.
-              You must start writing your story after pressing 'Start writing' button
-              which will start the timer and see if you can finish writing within '3 minutes'.
-              <br><br>
-              <b>Your '4 minutes' will start as soon as you click the 'Start writing' button</b>
-            </p>
-
-            <br>
-
-            <center>
-              <a href="PPDT-set.html"><button type="button" class="btn btn-outline-primary btn-lg btn-img inst-practise-btn">Start Practising</button></a>
-            </center>
-
-            <br>
-
-
-          </div>
-
-
-            <br>
-
-
-
-            <br>
-
-
-        </section>
-
-
-<br>
-<hr>
-<br>
-
-
-  <!-- footer -->
-  <section>
-    <div class="footer">
-      <div class="footer-content" style="margin:10px;">
-        <center>
-          <h2 class="footer-heading">DISCLAIMER - THE WEBSITE DONT OFFER ANY COACHING AND TIPS OR INSTRUCTIONS FOR GETTING RECOMMENDED.</h2>
-        </center>
-          <hr>
-        <center>
-          Built and maintained by a person who is,
-                                             HEARTY IS HIS APPROBATION AND LAVISH IN HIS PRAISE.
-                                             <br><br>
-                                             <h6>Copyright 2025</h6>
-        </center>
-
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-medal mr-2"></i>AIMOLIVE
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">PRACTICE</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="TAT-arena.html">TAT</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="ALL-PRACTICE_PDF.html">SSB BOOKS</a></li>
+        </ul>
       </div>
     </div>
-  </section>
+  </nav>
 
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">PPDT Practice SOP</h1>
+      <p class="page-subtitle">Standard Operating Procedure for Online Drills</p>
+    </div>
+  </header>
 
+  <main class="container">
+    
+    <div class="info-card">
+      <div class="card-header-custom">
+        <i class="fas fa-eye fa-2x"></i> PHASE 1: OBSERVATION PROTOCOL
+      </div>
+      <div class="card-body-custom">
+        <p>Once you initiate a test sequence, a hazy picture will be displayed on your screen. A countdown timer will immediately begin.</p>
+        <ul class="mt-3 pl-4" style="list-style-type: square; color: var(--od-green);">
+            <li class="mb-2"><strong>Duration:</strong> You have exactly <strong>30 seconds</strong> to observe the image.</li>
+            <li class="mb-2"><strong>Objective:</strong> Identify the number of characters, their age, gender, mood, and the central action/theme.</li>
+            <li class="mb-2"><strong>Auto-Termination:</strong> The image will automatically vanish when the timer hits zero.</li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="info-card" style="border-left-color: var(--tactical-tan);">
+      <div class="card-header-custom" style="background: #222;">
+        <i class="fas fa-pen-fancy fa-2x"></i> PHASE 2: REPORT WRITING
+      </div>
+      <div class="card-body-custom">
+        <p>Immediately after observation, the writing phase begins. You must type your story in the provided text area or write it on paper offline.</p>
+        <ul class="mt-3 pl-4" style="list-style-type: square; color: var(--od-green);">
+            <li class="mb-2"><strong>Duration:</strong> You have <strong>4 minutes</strong> to complete your story.</li>
+            <li class="mb-2"><strong>Objective:</strong> Write a logical story with a clear Past (what led to this), Present (current action), and Future (outcome).</li>
+            <li class="mb-2"><strong>Integrity Check:</strong> Be honest with the time limit. If you cannot finish in 4 minutes, practice more to increase your speed.</li>
+        </ul>
+      </div>
+    </div>
 
-  </body>
+    <div class="alert alert-warning text-center" style="border-left: 5px solid var(--od-green); background-color: #fff3cd; color: #856404;">
+        <i class="fas fa-exclamation-triangle mr-2"></i>
+        <strong>TACTICAL NOTE:</strong> To restart any mission instantly, simply refresh the page. Data is not saved between sessions to ensure fresh practice every time.
+    </div>
+
+    <div class="text-center my-5">
+      <a href="PPDT-set.html" style="text-decoration: none;">
+        <button class="btn-tactical-lg">
+          <i class="fas fa-play-circle mr-2"></i> COMMENCE PRACTICE
+        </button>
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <h2 class="footer-heading">DISCLAIMER</h2>
+      <p>This website is a self-preparation tool and does not offer coaching, tips, or guarantee of recommendation.</p>
+      <hr>
+      <p class="footer-quote">"HEARTY IS HIS APPROBATION AND LAVISH IN HIS PRAISE."</p>
+      <div class="mt-4">
+        <h6>© 2025 AimOlive | All Rights Reserved</h6>
+        <p class="mt-2">Made with ❤️ & 🇮🇳 by <strong>sumanisfr</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
