@@ -3,7 +3,8 @@
 > **Created & Maintained by [Suman Kumar Ghosh](https://github.com/sumanisfr)**  
 > ⚔️ A Non-Profit Web Platform for Defense Aspirants
 
-![AimOlive Home](screenshots/image_a07b39.jpg)
+![AimOlive Home](![Uploading Screenshot 2025-11-08 013831.png…]()
+)
 
 ---
 
